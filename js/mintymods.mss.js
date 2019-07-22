@@ -1,6 +1,25 @@
-var trigger = $('#hamburger');
+var layout = 'packery';
+var trigger = $('.mss-ui-burger-icon');
 trigger.click(function () {
     burgerTime();
+});
+
+var toggle = $('#toggle-layout');
+toggle.click(function () {
+    if (layout == 'packery') {
+        layout = 'masonry';
+        toggle.text('Layout = Packery - Click for Masonry');
+    } else {
+        layout = 'packery';
+        toggle.text('Layout = Masonry - Click for Packery');
+    }
+    initLayoutManager();
+});
+toggle.click();
+
+var notification = $('#send-example-notification');
+notification.click(function () {
+    mss.popIn('CPU is overheating...');
 });
 
 function burgerTime() {
@@ -9,8 +28,38 @@ function burgerTime() {
 }
 
 function initSensorServer() {
-    navigation = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('hamburger'));
+    navigation = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('mss-ui-menu-toggle'));
+    initLayoutManager();
     initPNotify();
+}
+
+function initLayoutManager() {
+    switch (layout) {
+        case 'masonry':
+            initMasonry();
+            break;
+        case 'packery':
+            initPackery();
+            break;
+    }
+
+}
+
+function initPackery() {
+    $('.demo-grid').packery({
+        // options
+        itemSelector: '.grid-item',
+        gutter: 10
+    });
+}
+
+function initMasonry() {
+    $('.demo-grid').masonry({
+        // options
+        itemSelector: '.grid-item',
+        columnWidth: 400
+    });
+
 }
 
 function initPNotify() {
@@ -114,20 +163,20 @@ var mss = new function () {
         //     	};
         //     	sendNotification(wrapper);
 
-
-        PNotify.desktop.permission();
-        (new PNotify({
-            title: 'Desktop Success',
-            text: 'If you\'ve given me permission, I\'ll appear as a desktop notification. If you haven\'t, I\'ll still appear as a regular PNotify notice.',
-            type: 'success',
-            desktop: {
-                desktop: true
-            }
-        })).get().click(function (e) {
-            if ($('.ui-pnotify-closer, .ui-pnotify-sticker, .ui-pnotify-closer *, .ui-pnotify-sticker *').is(e.target)) return;
-            alert('Hey! You clicked the desktop notification!');
-        });
-
+        /*
+                PNotify.desktop.permission();
+                (new PNotify({
+                    title: 'Desktop Success',
+                    text: 'If you\'ve given me permission, I\'ll appear as a desktop notification. If you haven\'t, I\'ll still appear as a regular PNotify notice.',
+                    type: 'success',
+                    desktop: {
+                        desktop: true
+                    }
+                })).get().click(function (e) {
+                    if ($('.ui-pnotify-closer, .ui-pnotify-sticker, .ui-pnotify-closer *, .ui-pnotify-sticker *').is(e.target)) return;
+                    alert('Hey! You clicked the desktop notification!');
+                });
+        */
 
     };
 
@@ -143,10 +192,10 @@ var mss = new function () {
         PNotify.modules.History.showAll();
     };
 
-    document.addEventListener('DOMContentLoaded', function () {
-        if (Notification.permission !== "granted")
-            Notification.requestPermission();
-    });
+    //    document.addEventListener('DOMContentLoaded', function () {
+    //        if (Notification.permission !== "granted")
+    //            Notification.requestPermission();
+    //    });
 
 
     window.notifyMe = function () {

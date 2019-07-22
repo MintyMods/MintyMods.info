@@ -4,6 +4,9 @@ primary-color-dark  #0D47A1     rgba(13, 71, 161)
 greenyellow         #ADFF2F     rgba(173, 255, 47)
 */
 
+--primary-color:#4285F4;
+--primary-color-dark:#0D47A1 --secondary-color: #ADFF2F;
+
 @font-face {
     font-family: 'lightning-volt';
     src: url('../fonts/LIGHRGS.TTF');
@@ -13,7 +16,8 @@ html,
 body,
 .container,
 .scroller {
-    height: 100%;
+    height: 100vh;
+    margin: 0;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -43,6 +47,17 @@ body {
     margin: 0;
     padding: 0px;
 }
+
+#mss-ui-menu-toggle {
+    color: rgba(173, 255, 47);
+    position: fixed;
+    cursor: pointer;
+    z-index: 4;
+    left: 5px;
+    top: 5px;
+    font-size: 2em;
+}
+
 
 #main-content {
     margin: 5px;
@@ -80,12 +95,6 @@ a:focus {
     margin: 0 auto;
 }
 
-#hamburger {
-    cursor: pointer;
-    z-index: 4;
-    left: -10px;
-    top: -50px;
-}
 
 .fal::before {
     padding-right: 10px !important;

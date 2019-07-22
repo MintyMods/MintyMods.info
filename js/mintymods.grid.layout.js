@@ -658,11 +658,6 @@ $(function () {
     }, 2000);
 
 
-    $('.demo-grid').masonry({
-        // options
-        itemSelector: '.grid-item',
-        columnWidth: 200
-    });
 
 
 

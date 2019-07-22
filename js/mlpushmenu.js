@@ -127,11 +127,11 @@
                 } else {
                     self._openMenu();
                     // the menu should close if clicking somewhere on the body (excluding clicks on the menu)
-//                    document.addEventListener(self.eventtype, function (ev) {
-                              //                        if (self.open && !hasParent(ev.target, self.el.id)) {
-                              //                            bodyClickFn(this);
-                              //                        }
-                              //                    });
+                    document.addEventListener(self.eventtype, function (ev) {
+                        if (self.open && !hasParent(ev.target, self.el.id)) {
+                            bodyClickFn(this);
+                        }
+                    });
                 }
             });
 

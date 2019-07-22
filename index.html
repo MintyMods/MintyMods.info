@@ -5,16 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <!--link href="fontawesome-pro/css/fontawesome.min.css" rel="stylesheet"-->
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="css/mlpushmenu.css" />
     <!--link href="css/bootstrap.min.css" rel="stylesheet"-->
     <link href="css/mdb.min.css" rel="stylesheet">
     <link href="css/mintymods.mss.css" rel="stylesheet">
     <link href="css/mintymods-hamburger.css" rel="stylesheet">
-    <link href="css/mintymods-notifications.css" rel="stylesheet">
+    <link href="css/mintymods.notifications.css" rel="stylesheet">
     <link href="css/mintymods.components-right.css" rel="stylesheet">
     <link href="css/mintymods.component.css" rel="stylesheet">
     <link href="css/mintymods.grid.layout.css" rel="stylesheet">
@@ -186,11 +184,9 @@
 
                     <!-- MAIN BODY CONTENT HERE -->
                     <div id="main-content">
-                        <h1>Example of what a View might look like:-</h1>
-
-                        <p>This page is to test the LAYOUT of the modules rather than the functionality of the content.</p>
-                        <p>The modules should try to arrange themselves when the browser window is resized.</p>
-
+                        <p>This page is to test the UI (click the hamburger) and the dynamic layouts rather than the content. The modules should try to arrange themselves when the browser window is resized depending on the layout mode selected.</p>
+                        <button id="toggle-layout">Toggle Layout Mode</button>
+                        <button id="send-example-notification">Send Example Notification</button>
 
                         <!-- DEMO CHARTS -->
                         <div class="demo-grid">
@@ -217,7 +213,7 @@
                             <div class="grid-item">
                                 <div style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto" id="speed-container"></div>
                             </div>
-                     <div class="grid-item">
+                            <div class="grid-item">
                                 <div class="module" id="chart1" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto">
                                     <div id="container"></div>
                                 </div>
@@ -244,31 +240,8 @@
 
 
                         <!-- HAMBURGER -->
-                        <div id="hamburger" class="hamburglar is-closed">
-                            <div class="burger-icon">
-                                <div class="burger-container">
-                                    <span class="burger-bun-top"></span>
-                                    <span class="burger-filling"></span>
-                                    <span class="burger-bun-bot"></span>
-                                </div>
-                            </div>
-                            <!-- svg ring containter -->
-                            <div class="burger-ring">
-                                <svg class="svg-ring">
-                                    <path class="path" fill="none" stroke="greenyellow" stroke-miterlimit="10" stroke-width="4" d="M 34 2 C 16.3 2 2 16.3 2 34 s 14.3 32 32 32 s 32 -14.3 32 -32 S 51.7 2 34 2" />
-                                </svg>
-                            </div>
-                            <!-- the masked path that animates the fill to the ring -->
-                            <svg width="0" height="0">
-                                <mask id="mask">
-                                    <path xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#ff0000" stroke-miterlimit="10" stroke-width="4" d="M 34 2 c 11.6 0 21.8 6.2 27.4 15.5 c 2.9 4.8 5 16.5 -9.4 16.5 h -4" />
-                                </mask>
-                            </svg>
-                            <div class="path-burger">
-                                <div class="animate-path">
-                                    <div class="path-rotation"></div>
-                                </div>
-                            </div>
+                        <div id="mss-ui-menu-toggle" class="mss-ui-burger-icon">
+                            <i class="fas fa-hamburger"></i>
                         </div>
                         <!-- END HAMBURGER -->
                     </div>
@@ -283,16 +256,14 @@
     <script src="js/mlpushmenu.js"></script>
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
-
     <script src="js/mintymods.grid.layout.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/packery.pkgd.min.js"></script>
     <script src="highcharts/highcharts.js"></script>
     <script src="highcharts/highcharts-more.js"></script>
     <script src="highcharts/modules/exporting.js"></script>
     <script src="highcharts/modules/export-data.js"></script>
     <script src="highcharts/modules/solid-gauge.js"></script>
-
     <script src="js/jquery.knob.min.js"></script>
     <script src="js/jquery.sparkline.min.js"></script>
     <script src="pnotify/dist/es/PNotify.js"></script>
@@ -309,5 +280,8 @@
     <script src="js/mintymods.sidebarTransitions.js"></script>
     <script>
         initSensorServer();
+
     </script>
-</body></html>
+</body>
+
+</html>
