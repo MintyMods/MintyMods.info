@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+http://mintymods.netlify.com/* http://www.mintymods.info/:splat 301!
