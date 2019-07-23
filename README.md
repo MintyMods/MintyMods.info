@@ -21,7 +21,8 @@ MSS - Minty Sensor Server is an attempt to create a RESTful web service exposing
 * MSM2MSS : [Minty Sensor Monitor 2 Minty Sensor Server JNI Wrapper](https://github.com/MintyMods/MintySm2MintySsJniWrapper)
 
 ## Build Status
-Current build status for[MintyMods.info](https://mintymods.info)
+Current build status for live site : [MintyMods.info](https://mintymods.info)
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ae30fd9b-8533-4518-ba87-76a491bc3fda/deploy-status)](https://app.netlify.com/sites/mintymods/deploys)
 
 ## Authors
