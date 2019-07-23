@@ -115,6 +115,10 @@
             var bodyClickFn = function (el) {
                 self._resetMenu();
                 el.removeEventListener(self.eventtype, bodyClickFn);
+                
+                // Minty Hamburger mods
+                $('#minty-ui-menu-toggle').fadeIn('slow');
+            
             };
 
             // open (or close) the menu

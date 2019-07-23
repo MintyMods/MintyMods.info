@@ -1,8 +1,21 @@
 var layout = 'packery';
+
+$(document).ready(function () {
+    checkBrowserSupportAndNotifyIfUnSupported();
+    navigation = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('minty-ui-menu-toggle'));
+    initLayoutManager();
+    initPNotify();
+});
+
 var trigger = $('.mss-ui-burger-icon');
 trigger.click(function () {
-    burgerTime();
+    showSideBar();
 });
+
+function showSideBar() {
+    $('#minty-ui-menu-toggle').fadeOut('slow');
+    $('')
+}
 
 var toggle = $('#toggle-layout');
 toggle.click(function () {
@@ -22,15 +35,30 @@ notification.click(function () {
     mss.popIn('CPU is overheating...');
 });
 
-function burgerTime() {
-    trigger.toggleClass('is-open');
-    trigger.toggleClass('is-closed');
-}
+function checkBrowserSupportAndNotifyIfUnSupported() {
+    var $buoop = {
+        required: {
+            e: -5,
+            f: -5,
+            o: -5,
+            s: -5,
+            c: -5
+        },
+        insecure: true,
+        unsupported: true,
+        api: 2019.07
+    };
 
-function initSensorServer() {
-    navigation = new mlPushMenu(document.getElementById('mp-menu'), document.getElementById('mss-ui-menu-toggle'));
-    initLayoutManager();
-    initPNotify();
+    function $buo_f() {
+        var e = document.createElement("script");
+        e.src = "//browser-update.org/update.min.js";
+        document.body.appendChild(e);
+    };
+    try {
+        document.addEventListener("DOMContentLoaded", $buo_f, false)
+    } catch (e) {
+        window.attachEvent("onload", $buo_f)
+    }
 }
 
 function initLayoutManager() {
@@ -42,12 +70,10 @@ function initLayoutManager() {
             initPackery();
             break;
     }
-
 }
 
 function initPackery() {
     $('.demo-grid').packery({
-        // options
         itemSelector: '.grid-item',
         gutter: 10
     });
@@ -55,11 +81,9 @@ function initPackery() {
 
 function initMasonry() {
     $('.demo-grid').masonry({
-        // options
         itemSelector: '.grid-item',
         columnWidth: 400
     });
-
 }
 
 function initPNotify() {
