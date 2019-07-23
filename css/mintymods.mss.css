@@ -59,7 +59,7 @@ body {
     font-size: 2em;
 }
 
-.minty-ui-burger-icon {
+#minty-ui-burger-icon {
     text-shadow: 0 0 5px rgba(0, 0, 0, 1);
 }
 
@@ -150,6 +150,7 @@ a:focus {
     top: -40px;
     letter-spacing: .5px;
 }
+
 /* MAIN LOGO END */
 
 /*
