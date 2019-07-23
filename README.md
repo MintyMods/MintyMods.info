@@ -1,3 +1,4 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ae30fd9b-8533-4518-ba87-76a491bc3fda/deploy-status)](https://app.netlify.com/sites/mintymods/deploys)
 # MSS Minty's Sensor Server - www.MintyMods.info
 MSS - Minty Sensor Server is an attempt to create a RESTful web service exposing the various hardware sensor information provided by 3rd party software components:-
    * [HWiNFO](https://www.hwinfo.com) 
