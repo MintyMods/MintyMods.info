@@ -27,7 +27,7 @@ Current build status for live site : [MintyMods.info](https://mintymods.info)
 
 ## Authors
 
-* ** Rob Gregory (Minty) ** - *Initial work* - [MintyMods.info](https://github.com/MintyMods/MintyMods.info)
+* ** Rob Gregory (Minty) ** - *Initial work* 
 
 See also the list of [contributors](doc/CONTRIBUTORS.md) who participated in this project.
 
