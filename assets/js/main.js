@@ -5,7 +5,6 @@
 */
 
 (function ($) {
-
     var $window = $(window),
         $body = $('body');
 
@@ -38,7 +37,6 @@
         breakpoints.on('<=medium', function () {
             $body.addClass('is-mobile');
         });
-
     }
 
     // Scrolly.
@@ -80,6 +78,4 @@
 
         });
     });
-
-
 })();
