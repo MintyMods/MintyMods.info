@@ -106,53 +106,57 @@
         </div>
     </section>
 
-    <!-- Three -->
-    <section id="construction" class="wrapper style2 special">
-        <header class="major">
-            <h2><i class="fal fa-construction"></i> This site is currently Under Construction <i class="fal fa-digging"></i></h2>
-            <p>Please ignore any random changes and report anything that doesn't work?</p>
-            <p>Click the Prototype link if you would like to see the current progress on the User Interface for the Minty Sensor Server component.</p>
-        </header>
+    <section class="wrapper style2 special">
         <ul class="actions special">
-            <i class="button primary"><a href="demo.html" class="button primary fal fa-vial"> Prototype</a></i>
+            <li><a href="javascript:showContactForm();" class="button icon fa-comments ">Contact</a></li>
+            <li><a href="demo.html" class="button primary icon fa-lightbulb-on">Demo</a></li>
         </ul>
     </section>
 
-
-    <section>
-        <h4>Messages can be submitted via the following form:-</h4>
-        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
-            <div>
-                <div class="col-6 col-12-xsmall">
-                    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-                </div>
-                <div class="col-6 col-12-xsmall">
-                    <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-                </div>
-                <div class="col-12">
-                    <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-                </div>
-                <div class="col-12">
-                    <ul class="actions">
-                        <li><input type="submit" value="Send Message" class="primary" /></li>
-                        <li><input type="reset" value="Reset" /></li>
-                    </ul>
-                </div>
-            </div>
-        </form>
+    <section id="construction" class="wrapper special">
+        <header class="major">
+            <h2><i class="fal fa-digging"></i> This site is currently Under Construction <i class="fal fa-digging"></i></h2>
+        </header>
     </section>
 
+    <dialog id="contactsDialog">
+        <section class="contact-form">
+            <h4><i class="fal fa-comments"></i> Contact</h4>
+            <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
+                <p style="display:none" class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
+                <div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                    </div>
+                    <div class="col-6 col-12-xsmall">
+                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                    </div>
+                    <div class="col-12">
+                        <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                    </div>
+                    <div class="col-12" data-netlify-recaptcha="true">
+
+                    </div>
+                    <div class="col-12">
+                        <ul class="actions">
+                            <li><input type="submit" value="Send Message" class="primary" /></li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </dialog>
 
 
     <!-- Footer -->
     <footer id="footer">
         <ul class="icons">
-            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-            <li><a href="#" class="icon brands fab fa-steam"><span class="label">Steam</span></a></li>
-            <i class="fab fa-steam"></i>
+            <li><a href="https://github.com/MintyMods" class="icon brands fab fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="https://steamcommunity.com/id/MintyMods" class="icon brands fab fa-steam"><span class="label">Steam</span></a></li>
+            <li><a href="https://www.youtube.com/user/MintyMods" class="icon brands fab fa-youtube"><span class="label">YouTube</span></a></li>
         </ul>
-        <p class="copyright">&copy; Rob Gregory [Minty] <br /><a href="https://html5up.net/fractal">Fractal</a> : <a href="http://html5up.net">HTML5 UP</a></p>
+        <p class="copyright">&copy; Rob Gregory [Minty]</p>
+        <p class="copyright template">Template by <a href="http://html5up.net">HTML5 UP</a></p>
     </footer>
 
     <!-- Scripts -->

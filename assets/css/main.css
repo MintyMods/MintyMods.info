@@ -144,6 +144,19 @@ body {
 
 }
 
+.contact-form- {
+    border: 2px dashed red !important;
+    width: 80%;
+    text-align: center;
+    display: none;
+
+}
+
+.template {
+    position: absolute;
+    padding-left: 50px;
+}
+
 .notification-test {
     border: 1px red;
 }
