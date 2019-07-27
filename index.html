@@ -1,285 +1,169 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
+<!DOCTYPE HTML>
+<!--
+	Fractal by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="css/mlpushmenu.css" />
-    <!--link href="css/bootstrap.min.css" rel="stylesheet"-->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <link href="css/mintymods.mss.css" rel="stylesheet">
-    <link href="css/mintymods-hamburger.css" rel="stylesheet">
-    <link href="css/mintymods.notifications.css" rel="stylesheet">
-    <link href="css/mintymods.components-right.css" rel="stylesheet">
-    <link href="css/mintymods.component.css" rel="stylesheet">
-    <link href="css/mintymods.grid.layout.css" rel="stylesheet">
+    <title>MSS - Minty Sensor Server</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <noscript>
+        <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 
-<body>
-    <div class="container">
-        <!-- Push Wrapper -->
-        <div class="mp-pusher" id="mp-pusher">
-            <!-- mp-menu -->
-            <nav id="mp-menu" class="mp-menu">
-                <div class="mp-level">
-                    <h2 class="menu-section mss-logo">
-                        <a class="sign-in" href="#"></a>
-                        <div id="mss-logo-wrapper">
-                            <div id="mss-logo-text"><span id="minty">Minty's</span><span id="sensor-server">Sensor Server</span></div>
-                        </div>
-                    </h2>
-                    <ul>
+<body class="is-preload">
 
-                        <li class="menu-section">
-                            <a class="fal fa-eye" href="#">Views</a>
-                            <div class="mp-level mp-level-icon">
-                                <h2 class="fal fa-eye"><i class="fal fa-eye"></i>Views</h2>
-                                <a class="mp-back" href="#">BACK</a>
-                                <ul>
-                                    <li class="menu-option"><a class="fal fa-desktop" href="#">PC</a></li>
-                                    <li class="menu-option"><a class="fal fa-tv-retro" href="#">TV</a></li>
-                                    <li class="menu-option"><a class="fal fa-mobile-android" href="#">Phone</a></li>
-                                    <li class="menu-option"><a class="fal fa-user-lock" href="#">Admin</a></li>
-                                </ul>
-                            </div>
-                        </li>
+    <!-- Header -->
+    <header id="header">
+        <div class="content">
+            <h1><span class="minty-mss-text">MSS</span> - Minty Sensor Server</h1>
+            <h2>Hardware Sensor Statistics Delivered.</h2>
+            <p>REST API, Charts, Notifications, History, Desktop Alerts.</p>
+            <ul class="actions">
+                <li><a href="#" class="button primary icon solid fa-download">Download</a></li>
+                <li><a href="#one" class="button icon solid fa-chevron-down scrolly">Learn More</a></li>
+            </ul>
+        </div>
+    </header>
 
-                        <li class="menu-section">
-                            <a class="fal fa-compress-arrows-alt" href="#">Sensors</a>
-                            <div class="mp-level">
-                                <h2 class="fal fa-compress-arrows-alt"><i class="fal fa-compress-arrows-alt"></i>Sensors</h2>
-                                <a class="mp-back" href="#">BACK</a>
-                                <ul>
-                                    <li class="menu-option"><a class="fal fa-thermometer-half" href="#">Temperatures</a></li>
-                                    <li class="menu-option"><a class="fal fa-bolt" href="#">Voltages</a></li>
-                                    <li class="menu-option"><a class="fal fa-fan" href="#">Fans</a></li>
-                                    <li class="menu-option"><a class="fal fa-wave-square" href="#">Currents</a></li>
-                                    <li class="menu-option"><a class="fal fa-car-battery" href="#">Power</a></li>
-                                    <li class="menu-option"><a class="fal fa-clock" href="#">Clocks</a></li>
-                                    <li class="menu-option"><a class="fal fa-chart-pie" href="#">Usages</a></li>
-                                    <li class="menu-option"><a class="fal fa-share-alt" href="#">Other</a></li>
-                                    <li class="menu-option"><a class="fal fa-empty-set" href="#">None</a></li>
-                                </ul>
-                            </div>
-                        </li>
+    <!-- One -->
+    <section id="one" class="wrapper style2 special">
+        <header class="major">
+            <h2>Temperatures, Voltages, Fan Speeds, Currents, Power, Clock Speeds, Usages</h2>
+        </header>
+        <ul class="icons major">
+            <li><span class="icon solid fal fa-thermometer-half"><span class="label">Temperatures</span></span></li>
+            <li><span class="icon solid fal fa-bolt"><span class="label">Voltages</span></span></li>
+            <li><span class="icon solid fal fa-fan"><span class="label">Fan Speeds</span></span></li>
+            <li><span class="icon solid fal fa-wave-square"><span class="label">Currents</span></span></li>
+            <li><span class="icon solid fal fa-car-battery"><span class="label">Power</span></span></li>
+            <li><span class="icon solid fal fa-clock"><span class="label">Clocks</span></span></li>
+            <li><span class="icon solid fal fa-chart-pie"><span class="label">Usages</span></span></li>
+        </ul>
+    </section>
 
-                        <li class="menu-section">
-                            <a class="fal fa-tachometer-average" href="#">Readings</a>
-                            <div class="mp-level">
-                                <h2 class="menu-icon"><i class="fal fa-tachometer-average"></i>Readings</h2>
-                                <a class="mp-back" href="#">BACK</a>
-                                <ul>
-                                    <li class="menu-option"><a class="fal fa-thermometer-half" href="#">GPU Temperature</a></li>
-                                    <li class="menu-option"><a class="fal fa-chart-pie" href="#">GPU Core Load</a></li>
-                                    <li class="menu-option"><a class="fal fa-car-battery" href="#">CPU Package Power</a></li>
-                                </ul>
-                            </div>
-                        </li>
+    <!-- Two -->
+    <section id="two" class="wrapper">
+        <div class="inner alt">
+            <section class="spotlight">
+                <div class="image"><img src="images/pic01.jpg" alt=""><i class="fal fa-analytics"></i></div>
+                <div class="content">
+                    <h3>User Defined Remote Views</h3>
+                    <p>Create custom views showing your selected sensor information via Gauges, Charts, Tables or just plain labels.</p>
+                    <span class="minty-tip">Remote view support via Browser, Mobile, or T.V.</span>
+                </div>
+            </section>
+            <section class="spotlight">
+                <div class="image"><img src="images/pic02.jpg" alt="" /></div>
+                <div class="content">
+                    <h3>User Defined Notifications / Alerts</h3>
+                    <p>Create custom alerts for sensors that deviate from predetermined minimum and/or maximum ranges. Different notification levels can be configured for info , warning, & critical e.g. desktop push notifications</p>
+                    <!--span>
+                        <a href="#" class="notification-test notification-debug button fal fa-debug">Debug</a>
+                        <a href="#" class="notification-test notification-info button icon fas fa-info-circle">Info</a>
+                        <a href="#" class="notification-test notification-warn button icon fal fa-engine-warning">Warn</a>
+                        <a href="#" class="notification-test notification-critical button icon fas fa-exclamation-triangle">Critical</a>
+                    </span-->
+                    <hr />
+                    <p>Cloud triggers enable actions via IFTTT or Amazon Web Services </p>
+                    <span class="minty-tip">Turn your lights red when your CPU overheats</span>
+                </div>
+            </section>
+            <section class="spotlight">
+                <div class="image"><img src="images/pic03.jpg" alt="" /></div>
+                <div class="content">
+                    <h3>Sensor History Recording</h3>
+                    <p>Sensor results are stored in a local database allowing full queries to be performed against previous recordingsSs</p>
+                    <p>Polling allows consistent history recording even while not using the views</p>
+                    <span class="minty-tip">Schedule recording of sensors every 30 seconds</span>
+                </div>
+            </section>
+            <section class="spotlight">
+                <div class="image"><img src="images/pic03.jpg" alt="" /></div>
+                <div class="content">
+                    <h3>API / SDK</h3>
+                    <p>RESTful service allows realtime remote reporting of current sensor values or queries against any previous sensor history</p>
+                    <span class="minty-tip">Open source, contributions and code reviews welcome</span>
+                </div>
+            </section>
+            <section class="special">
+                <h2>More Information? See the following projects:-</h2>
+                <ul class="icons labeled">
+                    <li><a href="https://github.com/MintyMods/MintySensorServer" class="icon solid fal fa-server"><span class="label">Minty Sensor Server</span></a></li>
+                    <li><a href="https://github.com/MintyMods/MintySensorMonitor" class="icon solid fal fa-analytics"><span class="label">Minty Sensor Monitor</span></a></li>
+                    <li><a href="https://github.com/MintyMods/MintySm2MintySsJniWrapper" class="icon solid fal fa-handshake-alt"><span class="label">MintySm2MintySsJniWrapper</span></a></li>
+                    <li><a href="https://www.hwinfo.com/" class="icon solid fal fa-info-circle"><span class="label">HWiNFO</span></a></li>
+                    <li><a href="https://www.techpowerup.com/gpuz/" class="icon solid fal fa-user-shield"><span class="label">GPU-Z</span></a></li>
+                    <li><a href="https://openhardwaremonitor.org/" class="icon solid fal fa-microchip"><span class="label">Open Hardware Monitor</span></a></li>
 
-                        <li class="menu-section">
-                            <a class="fal fa-digital-tachograph" href="#">Devices</a>
-                            <div class="mp-level">
-                                <h2 class="menu-icon"><i class="fal fa-digital-tachograph"></i>Devices</h2>
-                                <a class="mp-back" href="#">BACK</a>
-                                <ul>
-                                    <li class="menu-error"><a class="fal fa-user-lock" href="#">Error:</a></li>
-                                    <li class="menu-error"><a class="fal fa-user-lock" href="#">Error:</a></li>
-                                    <li class="menu-error"><a class="fal fa-user-lock" href="#">Error:</a></li>
-                                </ul>
-                            </div>
-                        </li>
+                </ul>
+            </section>
+        </div>
+    </section>
 
-                        <li class="menu-section">
-                            <a class="fal fa-network-wired" href="#">Hosts</a>
-                            <div class="mp-level">
-                                <h2 class="menu-icon"><i class="fal fa-network-wired"></i>Hosts</h2>
-                                <a class="mp-back" href="#">BACK</a>
-                                <ul>
-                                    <li class="menu-option"><a class="fal fa-home" href="#">Local Host</a></li>
-                                    <li class="menu-option"><a class="fal fa-project-diagram" href="#">Remote Host</a></li>
-                                </ul>
-                            </div>
-                        </li>
-
-                        <li class="menu-section">
-                            <a class="fal fa-podcast" href="#">Providers</a>
-                            <div class="mp-level">
-                                <h2 class="menu-icon"><i class="fal fa-podcast"></i>Providers</h2>
-                                <a class="mp-back" href="#">BACK</a>
-                                <ul>
-                                    <li class="menu-option"><a class="fal fa-info" href="#">HWiNFO</a></li>
-                                    <li class="menu-option"><a class="fal fa-user-shield" href="#">GPU-Z</a></li>
-                                    <li class="menu-option"><a class="fal fa-microchip" href="#"><small>Open Hardware Monitor</small></a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="menu-option"><a class="fal fa-cog">Settings</a></li>
-
-
-                        <!-- TESTING -->
-                        <li class="menu-section">
-                            <a class="fal fa-vial" href="#">Testing</a>
-
-                            <div class="mp-level">
-                                <h2 class="fal fa-dice-one"><i class="fal fa-dice-one"></i> Level One</h2>
-                                <a class="mp-back" href="#">BACK</a>
-                                <ul>
-                                    <li class="icon icon-arrow-left">
-                                        <a class="fal fa-dice-two" href="#">Level 2</a>
-
-                                        <div class="mp-level">
-                                            <h2 class="fal fa-dice-two"><i class="fal fa-dice-two"></i>Level Two</h2>
-                                            <a class="mp-back" href="#">BACK</a>
-                                            <ul>
-                                                <li><a href="#"><i class="fal fa-dice-three"></i> Level 3</a>
-                                                    <div class="mp-level">
-                                                        <h2 class="fal fa-dice-three"><i class="fal fa-dice-three"></i>Level Three</h2>
-                                                        <a class="mp-back" href="#">BACK</a>
-                                                        <ul>
-                                                            <li class="icon icon-arrow-left">
-                                                                <a class="fal fa-dice-four" href="#">Phones</a>
-                                                                <div class="mp-level">
-                                                                    <h2 class="fal fa-dice-four"><i class="fal fa-dice-four"></i>Phones</h2>
-                                                                    <a class="mp-back" href="#">BACK</a>
-                                                                    <ul>
-                                                                        <li><a href="#"><i class="fal fa-mobile-android-alt"></i>Super Smart</a></li>
-                                                                        <li><a href="#"><i class="fal fa-mobile-alt"></i>Thin Magic</a></li>
-                                                                        <li><a href="#"><i class="fal fa-mobile"></i>Performance</a></li>
-                                                                        <li><a href="#"><i class="fal fa-phone-office"></i>Work</a></li>
-                                                                    </ul>
-                                                                </div>
-                                                            </li>
-
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                                <li><a href="#"><i class="fal fa-mobile"></i>Empty</a></li>
-                                            </ul>
-                                        </div>
-
-                                    </li>
-                                    <li class="icon icon-arrow-left">
-                                        <!-- ... -->
-                                    </li>
-                                    <li class="icon icon-arrow-left">
-                                        <!-- ... -->
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <!-- END TESTING  -->
+    <!-- Three -->
+    <section id="construction" class="wrapper style2 special">
+        <header class="major">
+            <h2><i class="fal fa-construction"></i> This site is currently Under Construction <i class="fal fa-digging"></i></h2>
+            <p>Please ignore any random changes and report anything that doesn't work?</p>
+            <p>Click the Prototype link if you would like to see the current progress on the User Interface for the Minty Sensor Server component.</p>
+        </header>
+        <ul class="actions special">
+            <i class="button primary"><a href="demo.html" class="button primary fal fa-vial"> Prototype</a></i>
+        </ul>
+    </section>
 
 
-
+    <section>
+        <h4>Messages can be submitted via the following form:-</h4>
+        <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <div>
+                <div class="col-6 col-12-xsmall">
+                    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                </div>
+                <div class="col-6 col-12-xsmall">
+                    <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                </div>
+                <div class="col-12">
+                    <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                </div>
+                <div class="col-12">
+                    <ul class="actions">
+                        <li><input type="submit" value="Send Message" class="primary" /></li>
+                        <li><input type="reset" value="Reset" /></li>
                     </ul>
                 </div>
-            </nav>
-            <!-- /mp-menu -->
-            <div class="scroller">
-                <!-- this is for emulating position fixed of the nav -->
-                <div class="scroller-inner">
-
-                    <!-- MAIN BODY CONTENT HERE -->
-                    <div id="minty-main-content">
-                        <p>This page is to test the UI (click the hamburger) and the dynamic layouts rather than the content. The modules should try to arrange themselves when the browser window is resized depending on the layout mode selected.</p>
-                        <button id="toggle-layout">Toggle Layout Mode</button>
-                        <button id="send-example-notification">Send Example Notification</button>
-
-                        <!-- DEMO CHARTS -->
-                        <div class="demo-grid">
-                            <div class="grid-item">
-                                <div class="module" id="chart1" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto">
-                                    <div id="container"></div>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <div id="container-vu" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
-                            </div>
-                            <div class="grid-item grid-item--width2">
-                                <div id="container-rpm" class="chart-container" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
-                            </div>
-                            <div class="grid-item">
-                                <div id="container-speed" class="chart-container" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
-                            </div>
-                            <div class="grid-item">
-                                <div id="pie-container" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
-                            </div>
-                            <div class="grid-item">
-                                <div id="half-pie-container" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
-                            </div>
-                            <div class="grid-item">
-                                <div style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto" id="speed-container"></div>
-                            </div>
-                            <div class="grid-item">
-                                <div class="module" id="chart1" style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto">
-                                    <div id="container"></div>
-                                </div>
-                            </div>
-                            <div class="grid-item">
-                                <div id="container-vu" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
-                            </div>
-                            <div class="grid-item grid-item--width2">
-                                <div id="container-rpm" class="chart-container" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
-                            </div>
-                            <div class="grid-item">
-                                <div id="container-speed" class="chart-container" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
-                            </div>
-                            <div class="grid-item">
-                                <div id="pie-container" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
-                            </div>
-                            <div class="grid-item">
-                                <div id="half-pie-container" style="height: 400px; max-width: 600px; margin: 0 auto"></div>
-                            </div>
-                            <div class="grid-item">
-                                <div style="min-width: 310px; max-width: 400px; height: 300px; margin: 0 auto" id="speed-container"></div>
-                            </div>
-                        </div>
+            </div>
+        </form>
+    </section>
 
 
-                        <!-- HAMBURGER -->
-                        <div id="minty-ui-menu-toggle">
-                            <i class="fal fa-bars"></i>
-                        </div>
-                        <!-- END HAMBURGER -->
-                    </div>
-                </div>
-            </div> <!-- /scroller-inner -->
-        </div><!-- /scroller -->
-    </div><!-- /pusher -->
-    </div><!-- /container -->
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="icons">
+            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon brands fab fa-steam"><span class="label">Steam</span></a></li>
+            <i class="fab fa-steam"></i>
+        </ul>
+        <p class="copyright">&copy; Rob Gregory [Minty] <br /><a href="https://html5up.net/fractal">Fractal</a> : <a href="http://html5up.net">HTML5 UP</a></p>
+    </footer>
+
+    <!-- Scripts -->
     <script src="https://kit.fontawesome.com/2007ef201b.js"></script>
-    <script src="js/modernizr.custom.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/mlpushmenu.js"></script>
-    <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/mintymods.grid.layout.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/packery.pkgd.min.js"></script>
-    <script src="highcharts/highcharts.js"></script>
-    <script src="highcharts/highcharts-more.js"></script>
-    <script src="highcharts/modules/exporting.js"></script>
-    <script src="highcharts/modules/export-data.js"></script>
-    <script src="highcharts/modules/solid-gauge.js"></script>
-    <script src="js/jquery.knob.min.js"></script>
-    <script src="js/jquery.sparkline.min.js"></script>
-    <script src="pnotify/dist/es/PNotify.js"></script>
-    <script src="pnotify/dist/es/PNotifyAnimate.js"></script>
-    <script src="pnotify/dist/es/PNotifyButtons.js"></script>
-    <script src="pnotify/dist/es/PNotifyCallbacks.js"></script>
-    <script src="pnotify/dist/es/PNotifyStyleMaterial.js"></script>
-    <script src="pnotify/dist/es/PNotifyDesktop.js"></script>
-    <script src="pnotify/dist/es/PNotifyHistory.js"></script>
-    <script src="pnotify/dist/es/PNotifyNonBlock.js"></script>
-    <script src="pnotify/dist/es/PNotifyReference.js"></script>
-    <script src="pnotify/dist/es/PNotifyStyleMaterial.js"></script>
-    <script src="js/mintymods.mss.js"></script>
-    <script src="js/mintymods.sidebarTransitions.js"></script>
-    <script src="js/hootsuite-gridList.js"></script>
-    <script src="js/hootsuite-jquery.gridList.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
 </body>
 
 </html>
