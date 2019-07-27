@@ -70,7 +70,7 @@
                         <a href="#" class="notification-test notification-critical button icon fas fa-exclamation-triangle">Critical</a>
                     </span-->
                     <hr />
-                    <p>Cloud triggers enable actions via IFTTT or Amazon Web Services </p>
+                    <p>Cloud triggers enable actions via IFTTT </p>
                     <span class="minty-tip">Turn your lights red when your CPU overheats</span>
                 </div>
             </section>
@@ -108,7 +108,7 @@
 
     <section class="wrapper style2 special">
         <ul class="actions special">
-            <li><a href="javascript:showContactForm();" class="button icon fa-comments ">Contact</a></li>
+            <li><a id="contactDetails" class="button icon fa-comments ">Contact</a></li>
             <li><a href="demo.html" class="button primary icon fa-lightbulb-on">Demo</a></li>
         </ul>
     </section>
@@ -119,29 +119,26 @@
         </header>
     </section>
 
-    <dialog id="contactsDialog">
+    <dialog id="contactDialog">
         <section class="contact-form">
-            <h4><i class="fal fa-comments"></i> Contact</h4>
-            <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
+            <h4 class="contact-dialog-title"> <i class="fal fa-comments"></i> Send me a message</h4>
+            <form id="contactForm" action="index.html" name="contactForm" method="dialog" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
                 <p style="display:none" class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
                 <div>
                     <div class="col-6 col-12-xsmall">
-                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+                        <input type="text" name="contact-name" id="demo-name" value="" placeholder="Name" required />
                     </div>
                     <div class="col-6 col-12-xsmall">
-                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+                        <input type="email" name="contact-email" id="demo-email" value="" placeholder="Email (optional)" />
                     </div>
                     <div class="col-12">
-                        <textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+                        <textarea name="contact-message" id="demo-message" placeholder="Enter your message" rows="6" required></textarea>
                     </div>
-                    <div class="col-12" data-netlify-recaptcha="true">
-
-                    </div>
-                    <div class="col-12">
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" class="primary" /></li>
-                        </ul>
-                    </div>
+                    <div class="col-12" data-netlify-recaptcha="true"></div>
+                        <menu>
+                              <button value="cancel">Cancel</button>
+                              <button id="confirmBtn" class="primary" value="default">Send Message</button>
+                    </menu>
                 </div>
             </form>
         </section>
@@ -154,6 +151,8 @@
             <li><a href="https://github.com/MintyMods" class="icon brands fab fa-github"><span class="label">GitHub</span></a></li>
             <li><a href="https://steamcommunity.com/id/MintyMods" class="icon brands fab fa-steam"><span class="label">Steam</span></a></li>
             <li><a href="https://www.youtube.com/user/MintyMods" class="icon brands fab fa-youtube"><span class="label">YouTube</span></a></li>
+            <li><a href="https://www.linkedin.com/in/mintymods/" class="icon brands fab fa-linkedin"><span class="label">YouTube</span></a></li>
+
         </ul>
         <p class="copyright">&copy; Rob Gregory [Minty]</p>
         <p class="copyright template">Template by <a href="http://html5up.net">HTML5 UP</a></p>
