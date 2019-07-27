@@ -49,37 +49,37 @@
 
 })(jQuery);
 
-function  validateForm($form) {
-    
-}
-
 
 (function () {
-    var showContactDialog = document.getElementById('contactDetails');
     var contactDialog = document.getElementById('contactDialog');
     var confirmBtn = document.getElementById('confirmBtn');
+    var cancelBtn = document.getElementById('cancelBtn');
 
-    // “Update details” button opens the <dialog> modally
-    showContactDialog.addEventListener('click', function onOpen() {
+    $('#contactDetails').on('click', function onOpen() {
         if (typeof contactDialog.showModal === "function") {
             contactDialog.showModal();
         } else {
             alert("The dialog API is not supported by this browser");
         }
     });
-    // "Confirm" button of form triggers "close" on dialog because of [method="dialog"]
-    contactDialog.addEventListener('close', function onClose() {
-        console.log(contactDialog.returnValue + " button clicked - " + (new Date()).toString());
-        if (contactDialog.returnValue === 'default') {
-            $("#contactForm").submit(function (e) {
-                //e.preventDefault();
-                var $form = $(this);
-                if (validateForm($form)) {
-                    $.post($form.attr("action"), $form.serialize()).then(function () {
-                        alert("Your message has been sent. Thank you!");
-                    });
-                }
-            });
-        }
+
+    $('#cancelBtn').on('click', function onClose() {
+        $('#contactForm').trigger("reset");
+        contactDialog.close();
     });
+
+    $('#confirmBtn').one('click', function onClose() {
+        $("#contactForm").submit(function (e) {
+            e.preventDefault();
+            var $form = $(this);
+            $.post($form.attr("action"), $form.serialize()).then(function () {
+                $('#contactForm').trigger("reset");
+                alert("Your message has been sent. Thank you!");
+                contactDialog.close();
+            });
+
+        });
+    });
+
+
 })();

@@ -121,8 +121,8 @@
 
     <dialog id="contactDialog">
         <section class="contact-form">
-            <h4 class="contact-dialog-title"> <i class="fal fa-comments"></i> Send me a message</h4>
-            <form id="contactForm" action="index.html" name="contactForm" method="dialog" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
+            <h4 class="contact-dialog-title"> <i class="fal fa-comments"></i> Send a message...</h4>
+            <form id="contactForm" action="index.html" name="contactForm" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
                 <p style="display:none" class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
                 <div>
                     <div class="col-6 col-12-xsmall">
@@ -134,9 +134,9 @@
                     <div class="col-12">
                         <textarea name="contact-message" id="demo-message" placeholder="Enter your message" rows="6" required></textarea>
                     </div>
-                    <div class="col-12" data-netlify-recaptcha="true"></div>
+                    <div class="col-12" data-netlify-recaptcha="true" required></div>
                         <menu>
-                              <button value="cancel">Cancel</button>
+                              <button id="cancelBtn" value="cancel">Cancel</button>
                               <button id="confirmBtn" class="primary" value="default">Send Message</button>
                     </menu>
                 </div>
