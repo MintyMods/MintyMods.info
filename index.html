@@ -55,13 +55,14 @@
                 animation: octocat-wave 560ms ease-in-out
             }
         }
+
     </style>
 
     <!-- Header -->
     <header id="header">
         <div class="content">
             <h1><span class="minty-mss-text">MSS</span> - Minty Sensor Server</h1>
-            <h2>Sensor Statistics Recorded Delivery</h2>
+            <h2>Statistics via Recorded Delivery</h2>
             <p>REST API, Charts, Notifications, History, Desktop Alerts.</p>
             <ul class="actions">
                 <li><a href="#" class="button primary icon solid fa-download">Download</a></li>
@@ -94,7 +95,7 @@
                 <div class="content">
                     <h3>User Defined Remote Views</h3>
                     <p>Create custom views showing your selected sensor information via Gauges, Charts, Tables or just plain labels.</p>
-                    <span class="minty-tip">Remote view support via Browser, Mobile, or T.V.</span>
+                    <span class="minty-tip">Remote monitoring via PC, Mobile, or T.V.</span>
                 </div>
             </section>
             <section class="spotlight">
@@ -161,7 +162,7 @@
     <dialog id="contactDialog">
         <section class="contact-form">
             <h4 class="contact-dialog-title"> <i class="fal fa-comments"></i> Send a message...</h4>
-            <form id="contactForm" action="index.html" name="contactForm" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field">
+            <form id="contactForm" name="contactForm" method="POST" data-netlify="true" netlify-honeypot="bot-field">
                 <p style="display:none" class="hidden"><label>Don’t fill this out if you're human: <input name="bot-field" /></label></p>
                 <div>
                     <div class="col-6 col-12-xsmall">
@@ -173,7 +174,6 @@
                     <div class="col-12">
                         <textarea name="contact-message" id="demo-message" placeholder="Enter your message" rows="6" required></textarea>
                     </div>
-                    <div class="col-12" data-netlify-recaptcha="true" required></div>
                         <menu>
                               <button id="cancelBtn" value="cancel">Cancel</button>
                               <button id="confirmBtn" class="primary" value="default">Send Message</button>
@@ -209,6 +209,9 @@
     <script src="assets/pnotify/PNotifyButtons.js"></script>
     <script type="text/javascript">
         PNotify.alert('Notice me, senpai!');
+
     </script>
 
-</body></html>
+</body>
+
+</html>
