@@ -4,6 +4,52 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+
+function initMintyModsInfo() {
+    PNotify.alert('Notice me, senpai!');
+    makeGitHubRibbenTooltip();    
+}
+
+
+function makeGitHubRibbenTooltip() {
+    window.tooltip = PNotify.notice({
+        title: 'Fork MSS on GitHub',
+        text: "This project is open source and hosted on GitHub.",
+        hide: false,
+        animateSpeed: 'fast',
+        icon: 'fab fa-github',
+        // Setting stack to false causes PNotify to ignore this notice when positioning.
+        // It also causes the History module to ignore it.
+        stack: false,
+        autoDisplay: false,
+        destroy: false,
+        modules: {
+            Buttons: {
+                closer: false,
+                sticker: false
+            }
+        }
+    });
+    // Close the notice if the user mouses over it.
+    window.tooltip.on('mouseout', function () {
+        window.tooltip.close();
+    });
+    window.tooltip.on('mouseover', function () {
+        window.tooltip.open();
+    });
+    window.tooltip.on('mousemove', function () {
+        window.tooltip.refs.elem.style.top = (event.clientY + 12) + 'px';
+        window.tooltip.refs.elem.style.left = (event.clientX + 12) + 'px';
+    });
+    window.tooltip.on('mouseout', function () {
+        window.tooltip.close();
+    });
+}
+
+
+
+
+// Tooltip Handling
 $(document).ready(function () {
     $('.tooltip').tooltipster({
         theme: 'tooltipster-light',
@@ -12,6 +58,7 @@ $(document).ready(function () {
     });
 });
 
+// Main Page / Content Handling
 (function ($) {
     var $window = $(window),
         $body = $('body');
@@ -56,6 +103,7 @@ $(document).ready(function () {
 })(jQuery);
 
 
+// Contact Form Handling
 (function () {
     var contactDialog = document.getElementById('contactDialog');
     var confirmBtn = document.getElementById('confirmBtn');

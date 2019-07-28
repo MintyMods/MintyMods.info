@@ -27,8 +27,53 @@
 }
 
 .minty-projects {
-    border: 1px dashed red;
+    -moz-justify-content: center !important;
+    -webkit-justify-content: center !important;
+    -ms-justify-content: center !important;
+    justify-content: center !important;
 }
+
+
+
+.minty-projects li {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    margin: 0 !important;
+    line-height: 32px;
+    text-align: center !important;
+
+}
+
+.minty-projects li:hover {
+    text-shadow: 0px 0px 20px greenyellow;
+
+}
+
+
+.minty-projects li i {}
+
+.minty-projects li a {
+    display: inline-block;
+    text-decoration: none;
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.minty-projects li a span {
+    display: inline-block;
+    padding-top: 10px;
+    font-size: 10px;
+    width: 50px;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    text-align: center;
+
+}
+
+
 
 /*
 <li><a href="https://github.com/MintyMods/MintySensorServer" class="icon solid fal fa-server"><span class="label">Minty Sensor Server</span></a></li>

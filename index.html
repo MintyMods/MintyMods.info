@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="assets/css/main.css" />
     <link rel="stylesheet" href="assets/css/mintymods.info.css" />
     <link rel="stylesheet" href="assets/tooltipster/css/tooltipster.bundle.min.css" />
-
     <noscript>
         <link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -114,12 +113,12 @@
             <section class="special">
                 <h2>More Information? See the following projects:-</h2>
                 <ul class="icons labeled minty-projects">
-                    <li><a href="https://github.com/MintyMods/MintySensorServer" class="icon solid fal fa-server"><span class="label">Minty Sensor Server</span></a></li>
-                    <li><a href="https://github.com/MintyMods/MintySensorMonitor" class="icon solid fal fa-analytics"><span class="label">Minty Sensor Monitor</span></a></li>
-                    <li><a href="https://github.com/MintyMods/MintySm2MintySsJniWrapper" class="icon solid fal fa-handshake-alt"><span class="label">MintySm2MintySsJniWrapper</span></a></li>
-                    <li><a href="https://www.hwinfo.com/" class="icon solid fal fa-info-circle"><span class="label">HWiNFO</span></a></li>
-                    <li><a href="https://www.techpowerup.com/gpuz/" class="icon solid fal fa-user-shield"><span class="label">GPU-Z</span></a></li>
-                    <li><a href="https://openhardwaremonitor.org/" class="icon solid fal fa-microchip"><span class="label">Open Hardware Monitor</span></a></li>
+                    <li title="Minty Sensor Server" class="tooltip"><a href="https://github.com/MintyMods/MintySensorServer" class="icon solid fal fa-server"><span class="label"></span></a></li>
+                    <li title="Minty Sensor Monitor" class="tooltip"><a href="https://github.com/MintyMods/MintySensorMonitor" class="icon solid fal fa-analytics"><span class="label"></span></a></li>
+                    <li title="Minty Jni Wrapper" class="tooltip"><a href="https://github.com/MintyMods/MintySm2MintySsJniWrapper" class="icon solid fal fa-handshake-alt"><span class="label"></span></a></li>
+                    <li title="HWiNFO" class="tooltip"><a href="https://www.hwinfo.com/" class="icon solid fal fa-info-circle"><span class="label"></span></a></li>
+                    <li title="GPU-Z" class="tooltip"><a href="https://www.techpowerup.com/gpuz/" class="icon solid fal fa-user-shield"><span class="label"></span></a></li>
+                    <li title="Open Hardware Monitor" class="tooltip"><a href="https://openhardwaremonitor.org/" class="icon solid fal fa-microchip"><span class="label"></span></a></li>
 
                 </ul>
             </section>
@@ -135,7 +134,7 @@
 
     <section id="construction" class="wrapper special">
         <header class="major">
-            <h2><i class="fal fa-digging"></i> This site is currently Under Construction <i class="fal fa-digging"></i></h2>
+            <h2><i class="fal fa-digging fa-flip-horizontal"></i> This site is currently Under Construction <i class="fal fa-digging"></i></h2>
         </header>
     </section>
 
@@ -185,10 +184,12 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/tooltipster/js/tooltipster.bundle.min.js"></script>
-    <script src="pnotify/PNotify.js"></script>
-    <script src="pnotify/PNotifyButtons.js"></script>
-    <script type="text/javascript">
-        PNotify.alert('Notice me, senpai!');
-    </script>
+    <script src="pnotify/dist/es/PNotify.js"></script>
+    <script src="pnotify/dist/es/PNotifyButtons.js"></script>
     <script src="assets/js/mintymods.info.js"></script>
+    <script type="text/javascript">
+        $(document).ready({
+            initMintyModsInfo();
+        });
+    </script>
 </body></html>

@@ -444,7 +444,8 @@ a {
 }
 
 a:hover {
-    color: rgba(173, 255, 47, 1);
+
+    color: #5ca3e8;
 }
 
 strong,
