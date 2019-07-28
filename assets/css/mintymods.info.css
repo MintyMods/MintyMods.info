@@ -41,7 +41,7 @@
 }
 
 .minty-gradient {
-    url(#minty-gradient) #447799;
+    background: url(#minty-gradient) #447799;
 }
 
 dialog {
@@ -86,7 +86,26 @@ dialog div {
 }
 
 
+/* Footer icons */
+.fa-github:hover {
+    color: black !important;
+}
 
+.fa-steam:hover {
+    color: #00adee !important;
+}
+
+.fa-youtube:hover {
+    color: #FF3333 !important;
+}
+
+.fa-linkedin:hover {
+    color: #4875B4 !important;
+}
+
+.fa-facebook:hover {
+    color: #3B5998 !important;
+}
 
 /* GitHub Ribben */
 .github-corner:hover .octo-arm {
