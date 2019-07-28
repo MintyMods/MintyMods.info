@@ -101,10 +101,7 @@ dialog div {
 
 }
 
-.template {
-    position: absolute;
-    padding-left: 50px;
-}
+.template {}
 
 .notification-test {
     border: 1px red;
