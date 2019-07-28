@@ -6,13 +6,24 @@
 
 
 function initMintyModsInfo() {
-    PNotify.alert('Notice me, senpai!');
-    makeGitHubRibbenTooltip();    
+    PNotify.defaults.styling = 'material';
+    PNotify.defaults.icons = 'fontawesome5'; // Font Awesome 5
+    makeGitHubRibbenTooltip();
+
 }
+$("#download").click(function () {
+    PNotify.notice({
+        text: "Currently unavailable for download, Check the demo of the current prototype below.",
+        shadow: true,
+        icon: 'fal fa-info-circle fa-2x'
+    });
+});
 
 
 function makeGitHubRibbenTooltip() {
-    window.tooltip = PNotify.notice({
+    var corner = $('.github-corner');
+
+    corner.tooltip = PNotify.notice({
         title: 'Fork MSS on GitHub',
         text: "This project is open source and hosted on GitHub.",
         hide: false,
@@ -21,7 +32,7 @@ function makeGitHubRibbenTooltip() {
         // Setting stack to false causes PNotify to ignore this notice when positioning.
         // It also causes the History module to ignore it.
         stack: false,
-        autoDisplay: false,
+        autoDisplay: true,
         destroy: false,
         modules: {
             Buttons: {
@@ -31,18 +42,18 @@ function makeGitHubRibbenTooltip() {
         }
     });
     // Close the notice if the user mouses over it.
-    window.tooltip.on('mouseout', function () {
+    corner.tooltip.on('mouseout', function () {
         window.tooltip.close();
     });
-    window.tooltip.on('mouseover', function () {
+    corner.tooltip.on('mouseover', function () {
         window.tooltip.open();
     });
-    window.tooltip.on('mousemove', function () {
-        window.tooltip.refs.elem.style.top = (event.clientY + 12) + 'px';
-        window.tooltip.refs.elem.style.left = (event.clientX + 12) + 'px';
+    corner.tooltip.on('mousemove', function () {
+        corner.tooltip.refs.elem.style.top = (event.clientY + 12) + 'px';
+        corner.tooltip.refs.elem.style.left = (event.clientX + 12) + 'px';
     });
-    window.tooltip.on('mouseout', function () {
-        window.tooltip.close();
+    corner.tooltip.on('mouseout', function () {
+        corner.tooltip.close();
     });
 }
 
