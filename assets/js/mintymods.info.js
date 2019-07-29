@@ -113,6 +113,24 @@ $(document).ready(function () {
 
 })(jQuery);
 
+function getUnsupportedBrowserIcon() {
+    // https://github.com/GoogleChrome/dialog-polyfill
+    if ($.browser.chrome) {
+       return "fab fa-chrome";
+    } else if ($.browser.mozilla) {
+       return "fab fa-firefox";
+    } else if ($.browser.msie) {
+        //<i class="fab fa-edge"></i>
+       return "fab fa-internet-explorer";
+        
+    } else if ($.browser.opera) {
+        return "fab fa-opera";
+    } else if () {
+        return "fab fa-safari";       
+    } else {
+        return "fas fa-question-circle";
+   }
+}
 
 // Contact Form Handling
 (function () {
@@ -124,7 +142,12 @@ $(document).ready(function () {
         if (typeof contactDialog.showModal === "function") {
             contactDialog.showModal();
         } else {
-            alert("The dialog API is not supported by this browser");
+            //alert("The dialog API is not supported by this browser");
+            PNotify.error({
+                text: "The 'dialog' API is not supported by this browser - update your browser to a more secure modern browser",
+                shadow: true,
+                icon: getUnsupportedBrowserIcon()
+            });            
         }
     });
 
@@ -140,6 +163,11 @@ $(document).ready(function () {
             $.post($form.attr("action"), $form.serialize()).then(function () {
                 $('#contactForm').trigger("reset");
                 alert("Your message has been sent. Thank you!");
+                  PNotify.success({
+                        text: "Your message has been sent. Thank You!",
+                        shadow: true,
+                        icon: 'fal fa-inbox-out'
+                    });                   
                 contactDialog.close();
             });
 
