@@ -13,7 +13,7 @@ function initMintyModsInfo() {
 }
 $("#download").click(function () {
     PNotify.notice({
-        text: "Currently unavailable for download, Check the demo of the current prototype below.",
+        text: "Currently unavailable for download. See below for a demo of the current prototype.",
         shadow: true,
         icon: 'fal fa-info-circle fa-2x'
     });

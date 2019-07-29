@@ -13,6 +13,12 @@
     text-rendering: optimizeLegibility;
 }
 
+img {
+    shape-rendering: crispEdges;
+    fill: url(#MyGradient);
+
+}
+
 .minty-tip {
     border-bottom: solid 2px #eeeeee;
     border-radius: 30px;
@@ -52,20 +58,19 @@
     text-transform: capitalize;
 }
 
+@media screen and (max-width: 736px) and (orientation: portrait) {
+    .minty-projects li {
+        display: inline-block;
+        width: 60px;
+        height: 50px;
+    }
 
+}
 
-/*
-<li><a href="https://github.com/MintyMods/MintySensorServer" class="icon solid fal fa-server"><span class="label">Minty Sensor Server</span></a></li>
-*/
-
-
+/* Contact Dialog */
 .contact-dialog-title {
     padding: 5px;
     margin: 10px;
-}
-
-.minty-gradient {
-    background: url(#minty-gradient) #447799;
 }
 
 dialog {
@@ -80,31 +85,51 @@ dialog div {
 
 }
 
-.template {}
+/* End Contact Dialog */
 
-.notification-test {
-    border: 1px red;
+/* Gradient Placeholders */
+.minty-gradient {
+    display: none;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    vertical-align: middle;
 }
 
-/*
-.minty-tip:before {
-    font-family: 'Font Awesome 5 Pro';
-    position: absolute;
-    top: 13px;
-    color: #E8E8E8;
-    font-size: 34px;
+.minty-gradient:hover {
+
+    text-shadow: 0px 0px 100px white,
+        15px 15px 50px #4696e5, -3px 0 rgba(173, 255, 47, 0.5), 0 3px rgba(173, 255, 47, 0.5), 3px 0 rgba(173, 255, 47, 0.5), 0 -3px rgba(173, 255, 47, 0.5);
 }
 
-.minty-tip:before {
-    content: "\f05a";
+.minty-gradient i:hover {
+    //   color: rgba(255, 255, 255, .5) !important;
 }
 
-*/
-
-.minty-mss-text {
-    color: chartreuse;
-    font-weight: normal;
+#minty-gradient-views {
+    background-image: linear-gradient(to bottom, rgba(70, 150, 229, 0.5) 0, rgba(173, 255, 47, 0.5) 130%);
 }
+
+#minty-gradient-alerts {
+    background: radial-gradient(rgba(70, 150, 229, 0.5), rgba(173, 255, 47, 0.5));
+}
+
+#minty-gradient-rest {
+    background-image: linear-gradient(to bottom, rgba(173, 255, 47, 0.5) 0, rgba(70, 150, 229, 0.5) 100%);
+}
+
+#minty-gradient-history {
+    background: radial-gradient(rgba(173, 255, 47, 0.5), rgba(70, 150, 229, 0.5));
+}
+
+.minty-font-logo {
+    position: relative;
+    color: white;
+    font-size: 13em;
+    top: 20px;
+}
+
+/** End Gradient */
 
 
 /* Footer icons */
