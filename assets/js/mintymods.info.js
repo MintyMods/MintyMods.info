@@ -120,12 +120,11 @@ function getUnsupportedBrowserIcon() {
     } else if ($.browser.mozilla) {
        return "fab fa-firefox";
     } else if ($.browser.msie) {
-        //<i class="fab fa-edge"></i>
+        // fab fa-edge
        return "fab fa-internet-explorer";
-        
     } else if ($.browser.opera) {
         return "fab fa-opera";
-    } else if () {
+    } else if ($.browser.safari) {
         return "fab fa-safari";       
     } else {
         return "fas fa-question-circle";
@@ -142,7 +141,6 @@ function getUnsupportedBrowserIcon() {
         if (typeof contactDialog.showModal === "function") {
             contactDialog.showModal();
         } else {
-            //alert("The dialog API is not supported by this browser");
             PNotify.error({
                 text: "The 'dialog' API is not supported by this browser - update your browser to a more secure modern browser",
                 shadow: true,
@@ -162,12 +160,11 @@ function getUnsupportedBrowserIcon() {
             var $form = $(this);
             $.post($form.attr("action"), $form.serialize()).then(function () {
                 $('#contactForm').trigger("reset");
-                alert("Your message has been sent. Thank you!");
-                  PNotify.success({
-                        text: "Your message has been sent. Thank You!",
-                        shadow: true,
-                        icon: 'fal fa-inbox-out'
-                    });                   
+                PNotify.success({
+                    text: "Your message has been sent. Thank You!",
+                    shadow: true,
+                    icon: 'fal fa-inbox-out'
+                });                   
                 contactDialog.close();
             });
 
