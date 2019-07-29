@@ -113,6 +113,24 @@ $(document).ready(function () {
 
 })(jQuery);
 
+function getUnsupportedBrowserIcon() {
+    // https://github.com/GoogleChrome/dialog-polyfill
+    if (browser.name == "chrome") {
+       return "fab fa-chrome";
+    } else if (browser.name == "mozilla") {
+       return "fab fa-firefox";
+    } else if (browser.name == "msie") {
+        // fab fa-edge
+       return "fab fa-internet-explorer";
+    } else if (browser.name == "opera") {
+        return "fab fa-opera";
+    } else if (browser.name == "safari") {
+        return "fab fa-safari";       
+    } else {
+        return "fas fa-exclamation-triangle";
+   }
+}
+
 // Contact Form Handling
 (function () {
     var contactDialog = document.getElementById('contactDialog');
@@ -126,7 +144,7 @@ $(document).ready(function () {
             PNotify.error({
                 text: "The 'dialog' API is not supported by this browser - update your browser to a more secure modern browser",
                 shadow: true,
-                icon: "fas fa-exclamation-triangle"
+                icon: getUnsupportedBrowserIcon()
             });            
         }
     });
