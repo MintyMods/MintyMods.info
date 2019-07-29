@@ -116,18 +116,19 @@ $(document).ready(function () {
 function getUnsupportedBrowserIcon() {
     // https://github.com/GoogleChrome/dialog-polyfill
     if (browser.name == "chrome") {
-       return "fab fa-chrome";
+       return "fab fa-chrome fa-2x";
     } else if (browser.name == "mozilla") {
-       return "fab fa-firefox";
-    } else if (browser.name == "msie") {
-        // fab fa-edge
-       return "fab fa-internet-explorer";
+       return "fab fa-firefox fa-2x";
+    } else if (browser.name == "edge") {
+       return "fab fa-edge fa-2x"; 
+    } else if (browser.name == "ie") {
+       return "fab fa-internet-explorer fa-2x";
     } else if (browser.name == "opera") {
-        return "fab fa-opera";
+        return "fab fa-opera fa-2x";
     } else if (browser.name == "safari") {
-        return "fab fa-safari";       
+        return "fab fa-safari fa-2x";       
     } else {
-        return "fas fa-exclamation-triangle";
+        return "fas fa-exclamation-triangle fa-2x";
    }
 }
 
