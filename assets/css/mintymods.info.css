@@ -4,21 +4,11 @@
     font-weight: 900;
 }
 
-#construction {
-    color: red;
+.mss-tag-line {
+    font-variant-caps: all-small-caps;
 }
 
 /* -- create the minty tool tips -- */
-.spotlight p {
-    text-rendering: optimizeLegibility;
-}
-
-img {
-    shape-rendering: crispEdges;
-    fill: url(#MyGradient);
-
-}
-
 .minty-tip {
     border-bottom: solid 2px #eeeeee;
     border-radius: 30px;
@@ -29,16 +19,90 @@ img {
     color: #4696e5;
     background-color: rgba(173, 255, 47, 0.1);
     box-shadow: inset 0 0 0 2px #4696e5;
-
 }
 
-.minty-projects {}
+/* -- End create the minty tool tips -- */
 
+
+/* Minty Notifications */
+.minty-notification {
+    text-shadow: 0px 0px 50px greenyellow, 5px 5px 50px #4696e5, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #4696e5 !important;
+}
+
+.minty-notifications li {
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+}
+
+.minty-notifications li:hover {
+    text-shadow: 0px 0px 50px greenyellow, 5px 5px 50px #4696e5, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color: #4696e5 !important;
+}
+
+.minty-notification-icons {
+    position: relative;
+    font-size: 2em;
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+}
+
+.minty-notification-icons a:hover {
+    text-shadow: 0px 0px 50px greenyellow, 5px 5px 50px #4696e5, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    cursor: pointer;
+}
+
+#minty-notice:hover {
+    color: #66BB6A;
+    text-shadow: 0px 0px 50px #76ff03, 5px 5px 50px #32cb00, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    cursor: pointer;
+}
+
+#minty-info:hover {
+    color: rgb(70, 150, 229);
+    text-shadow: 0px 0px 50px #0d47a1, 5px 5px 50px #4285f4, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+    cursor: pointer;
+}
+
+#minty-warn:hover {
+    color: #FFEE58;
+    text-shadow: 0px 0px 50px #c7cc00, 5px 5px 50px #ffff00, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+    cursor: pointer;
+}
+
+#minty-critical:hover {
+    color: #EF5350;
+    text-shadow: 0px 0px 50px #ff3d00, 5px 5px 50px #c30000, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+    cursor: pointer;
+}
+
+#minty-fatal:hover {
+    color: yellow;
+    text-shadow: 0px 0px 50px red, 5px 5px 50px red, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black !important;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 736px) and (orientation: portrait) {
+    ul.icons.labeled {
+        text-align: center;
+        display: inline;
+    }
+}
+
+@media screen and (max-width: 736px) ul.icons.labeled {
+    text-align: center;
+}
+
+/* End Minty Notifications */
+
+
+/* Project Links Sections */
 .minty-projects li {
     display: inline-block;
     width: 100px;
     height: 50px;
-
 }
 
 .minty-projects li:hover {
@@ -58,14 +122,16 @@ img {
     text-transform: capitalize;
 }
 
+/* keep project icons vertical on mobile */
 @media screen and (max-width: 736px) and (orientation: portrait) {
     .minty-projects li {
         display: inline-block;
         width: 60px;
         height: 50px;
     }
-
 }
+
+/* End Project links secitons */
 
 /* Contact Dialog */
 .contact-dialog-title {
@@ -82,22 +148,34 @@ dialog {
 
 dialog div {
     padding: 5px;
-
 }
 
 /* End Contact Dialog */
 
 /* Gradient Placeholders */
 .minty-gradient {
+    text-align: center !important;
+    vertical-align: middle !important;
     display: none;
-    width: 250px;
-    height: 250px;
-    text-align: center;
-    vertical-align: middle;
+    width: 200px !important;
+    height: 150px !important;
+
+}
+
+.minty-font-logo {
+    color: white;
+    font-size: 7em !important;
+    display: inline-block !important;
+}
+
+
+@media screen and (max-width: 736px) and (orientation: portrait) {
+    .minty-font-logo {
+        font-size: 9em !important;
+    }
 }
 
 .minty-gradient:hover {
-
     text-shadow: 0px 0px 100px white,
         15px 15px 50px #4696e5, -3px 0 rgba(173, 255, 47, 0.5), 0 3px rgba(173, 255, 47, 0.5), 3px 0 rgba(173, 255, 47, 0.5), 0 -3px rgba(173, 255, 47, 0.5);
 }
@@ -107,7 +185,9 @@ dialog div {
 }
 
 #minty-gradient-views {
-    background-image: linear-gradient(to bottom, rgba(70, 150, 229, 0.5) 0, rgba(173, 255, 47, 0.5) 130%);
+    /*background: linear-gradient(45deg, rgb(70, 150, 229), transparent),
+        repeating-linear-gradient(45deg, rgb(173, 255, 47) 0%, rgb(70, 150, 229) 5%, transparent 5%, transparent 10%);*/
+    background: radial-gradient(rgba(173, 255, 47, 0.5), rgba(70, 150, 229, 0.5));
 }
 
 #minty-gradient-alerts {
@@ -122,18 +202,20 @@ dialog div {
     background: radial-gradient(rgba(173, 255, 47, 0.5), rgba(70, 150, 229, 0.5));
 }
 
-.minty-font-logo {
-    position: relative;
-    color: white;
-    font-size: 13em;
-    top: 20px;
+#minty-gradient-security {
+    background-image: linear-gradient(to bottom, rgba(70, 150, 229, 0.5) 0, rgba(173, 255, 47, 0.5) 130%);
+}
+
+#minty-gradient-api {
+    background: radial-gradient(rgba(173, 255, 47, 0.5), rgba(70, 150, 229, 0.5));
 }
 
 /** End Gradient */
 
 
 /* Footer icons */
-.fa-github:hover {
+.fa-github:hover,
+.fa-github-alt:hover {
     color: black !important;
     text-shadow: 0px 0px 50px greenyellow,
         5px 5px 50px #4696e5;

@@ -30,11 +30,10 @@
     <header id="header">
         <div class="content">
             <h1><span class="minty-mss-text">MSS</span> - Minty Sensor Server</h1>
-            <h2>Statistics, Recorded & Delivered</h2>
-            <p>REST API, Charts, Notifications, History, Desktop Alerts</p>
+            <h2 class="mss-tag-line">Computer Hardware Sensors Recorded & Delivered</h2>
+            <p>History, Charts, Notifications, Gauges<br />Desktop Alerts, RESTfull API</p>
             <ul class="actions">
-                <li><a id="download" title="Alpha - Currently not available for download.
-                    See below for a prototype demo" class="tooltip button primary icon solid fa-download">Download</a></li>
+                <li><a id="download" class="button primary icon solid fa-download">Download</a></li>
                 <li><a href="#one" class="button icon solid fa-chevron-down scrolly">Learn More</a></li>
             </ul>
         </div>
@@ -60,56 +59,59 @@
     <section id="two" class="wrapper">
         <div class="inner alt">
             <section class="spotlight">
-
                 <div id="minty-gradient-views" class="minty-gradient image"><i class="fal fa-phone-laptop  minty-font-logo"></i></div>
                 <div class="content">
                     <h3>User Defined Remote Views </h3>
-                    <p>Create custom views showing your selected sensor information via Gauges, Charts, Tables or just plain labels.</p>
-                    <span class="minty-tip">Remote monitoring via PC, Mobile, or T.V.</span>
+                    <p>Create custom remote views showing your selected sensor information via Gauges, Charts, Tables or just plain labels. Remote monitoring via PC, Mobile, or T.V.</p>
                 </div>
             </section>
             <section class="spotlight">
-                <div id="minty-gradient-alerts" class="minty-gradient image"><i class="fal fa-bell-exclamation minty-font-logo"></i></div>
+                <div id="minty-gradient-alerts" class="minty-gradient image"><i class="fal fa-bell-exclamation fa-fw minty-font-logo"></i></div>
                 <div class="content">
                     <h3>User Defined Alerts</h3>
-                    <p>Create custom notifications for sensors that deviate from predetermined minimum and/or maximum ranges. Different notification levels can be configured for info , warning, & critical e.g. desktop push notifications</p>
-                    <!--span>
-                        <a href="#" class="notification-test notification-debug button fal fa-debug">Debug</a>
-                        <a href="#" class="notification-test notification-info button icon fas fa-info-circle">Info</a>
-                        <a href="#" class="notification-test notification-warn button icon fal fa-engine-warning">Warn</a>
-                        <a href="#" class="notification-test notification-critical button icon fas fa-exclamation-triangle">Critical</a>
-                    </span-->
+                    <p>Create custom notifications for sensors that deviate from your minimum or maximum predetermined ranges</p>
+                    <ul class="icons labeled minty-notification-icons">
+                        <li id="minty-notice" title="Click to show an example NOTIFICATION" class="tooltip icon fas fa-question-circle"></li>
+                        <li id="minty-info" title="Click to show an example INFORMATION" class="tooltip icon fas fa-info-circle"></li>
+                        <li id="minty-warn" title="Click to show an example WARNING" class="tooltip icon far fa-exclamation-circle"></li>
+                        <li id="minty-critical" title="Click to show an example CRITICAL" class="tooltip icon fad fa-engine-warning"></li>
+                        <li id="minty-fatal" title="Click to show an example FATAL" class="tooltip icon fad fa-exclamation-triangle"></li>
+                    </ul>
                     <hr />
-                    <p>Cloud triggers enable actions via IFTTT </p>
-                    <span class="minty-tip">Turn your lights red when your CPU overheats</span>
+                    <p> <i class="fal fa-cloud-upload"></i> Cloud Triggers for <a href="https://ifttt.com/" title="If this then that" class="tooltip">IFTTT</a> actions - Turn your lights red when your CPU overheats</p>
                 </div>
             </section>
             <section class="spotlight">
-                <div id="minty-gradient-history" class="minty-gradient image"><i class="fal fa-history minty-font-logo"></i></div>
+                <div id="minty-gradient-history" class="minty-gradient image"><i class="fal fa-history fa-fw minty-font-logo"></i></div>
                 <div class="content">
                     <h3>Sensor History Recording</h3>
-                    <p>Sensor results are stored in a local database allowing full queries to be performed against previous recordingsSs</p>
-                    <p>Polling allows consistent history recording even while not using the views</p>
-                    <span class="minty-tip">Schedule sensor recording at pre-determined intervals</span>
+                    <p>Sensor results are stored in a local database allowing full queries to be performed against any previous recordings</p>
+                    <p>Scheduling allows consistent recording of sensor information even while not actively using the views. Schedule sensor recording at pre-determined intervals</p>
                 </div>
             </section>
             <section class="spotlight">
-                <div id="minty-gradient-rest" class="minty-gradient image"><i class="fal fa-book-reader minty-font-logo"></i></div>
+                <div id="minty-gradient-security" class="minty-gradient image"><i class="far fa-user-shield fa-fw minty-font-logo"></i></div>
                 <div class="content">
-                    <h3>Open Source API/SDK</h3>
-                    <p>RESTful service allows realtime remote reporting of current sensor values or queries against any previous sensor history</p>
-                    <span class="minty-tip">Open source, contributions and code reviews welcome</span>
+                    <h3>Secure</h3>
+                    <p>Authenticated User Access Control - HTTPS over TLS</p>
+                </div>
+            </section>
+            <section class="spotlight">
+                <div id="minty-gradient-rest" class="minty-gradient image"><i class="fal fa-book-reader fa-fw minty-font-logo"></i></div>
+                <div class="content">
+                    <h3>RESTfull API</h3>
+                    <p>RESTfull Web Service allows remote reporting of realtime sensor values or queries against sensor history - Supports Authentication</p>
                 </div>
             </section>
             <section class="special">
-                <h2><i class="fal fa-question-circle"></i> See the following projects for more Information:</h2>
+                <h2><i class="fal fa-question-circle"></i> See the following projects for more information</h2>
                 <ul class="icons labeled minty-projects">
-                    <li title="Minty Sensor Server" class="tooltip"><a href="https://github.com/MintyMods/MintySensorServer" class="icon solid fal fa-server"><span class="label"></span></a></li>
-                    <li title="Minty Sensor Monitor" class="tooltip"><a href="https://github.com/MintyMods/MintySensorMonitor" class="icon solid fal fa-analytics"><span class="label"></span></a></li>
-                    <li title="Minty Jni Wrapper" class="tooltip"><a href="https://github.com/MintyMods/MintySm2MintySsJniWrapper" class="icon solid fal fa-handshake-alt"><span class="label"></span></a></li>
-                    <li title="HWiNFO" class="tooltip"><a href="https://www.hwinfo.com/" class="icon solid fal fa-info-circle"><span class="label"></span></a></li>
-                    <li title="GPU-Z" class="tooltip"><a href="https://www.techpowerup.com/gpuz/" class="icon solid fal fa-user-shield"><span class="label"></span></a></li>
-                    <li title="Open Hardware Monitor" class="tooltip"><a href="https://openhardwaremonitor.org/" class="icon solid fal fa-microchip"><span class="label"></span></a></li>
+                    <li title="Minty Sensor Server" class="tooltip"><a href="https://github.com/MintyMods/MintySensorServer" class="icon solid fal fa-server"></a></li>
+                    <li title="Minty Sensor Monitor" class="tooltip"><a href="https://github.com/MintyMods/MintySensorMonitor" class="icon solid fal fa-analytics"></a></li>
+                    <li title="Minty Jni Wrapper" class="tooltip"><a href="https://github.com/MintyMods/MintySm2MintySsJniWrapper" class="icon solid fal fa-handshake-alt"></a></li>
+                    <li title="HWiNFO" class="tooltip"><a href="https://www.hwinfo.com/" class="icon solid fal fa-info-circle"></a></li>
+                    <li title="GPU-Z" class="tooltip"><a href="https://www.techpowerup.com/gpuz/" class="icon solid fal fa-user-shield"></a></li>
+                    <li title="Open Hardware Monitor" class="tooltip"><a href="https://openhardwaremonitor.org/" class="icon solid fal fa-microchip"></a></li>
 
                 </ul>
             </section>
@@ -123,10 +125,12 @@
         </ul>
     </section>
 
-    <section id="construction" class="wrapper special">
+    <section class="wrapper special">
         <header class="major">
             <h2><i class="fal fa-digging fa-flip-horizontal"></i> This site is currently Under Construction <i class="fal fa-digging"></i></h2>
+
         </header>
+
     </section>
 
     <dialog id="contactDialog">
@@ -153,18 +157,17 @@
         </section>
     </dialog>
 
-
     <!-- Footer -->
     <footer id="footer">
+
         <ul class="icons">
             <li><a href="https://github.com/MintyMods" title="MintyMods GitHub Repositories" class="tooltip icon brands fab fa-github"><span class="label">GitHub</span></a></li>
             <li><a href="https://steamcommunity.com/id/MintyMods" title="MintyMods Steam Profile" class="tooltip icon brands fab fa-steam"><span class="label">Steam</span></a></li>
             <li><a href="https://www.youtube.com/user/MintyMods" title="MintyMods YouTube Channel" class="tooltip icon brands fab fa-youtube"><span class="label">YouTube</span></a></li>
             <li><a href="https://www.linkedin.com/in/mintymods/" title="MintyMods LinkedIn Page" class="tooltip icon brands fab fa-linkedin"><span class="label">YouTube</span></a></li>
-
         </ul>
         <p class="copyright"><i class="fal fa-copyright"></i> Rob Gregory [Minty]</p>
-        <p class="tooltip copyright template" title="Site design based on Fractal by HTML5 UP">Template by <a href="http://html5up.net">HTML5 UP</a></p>
+        <div>Hosted on <a href="https://github.com/MintyMods/MintyMods.info" class="tooltip fab fa-github-alt" title="MintyMods.info"> GitHub</a> under the GNU General Public License v3.0 - <span class="tooltip copyright template" title="Site design based on Fractal by HTML5 UP">Template by <a href="http://html5up.net">HTML5 UP</a></span></div>
     </footer>
 
     <!-- Scripts -->

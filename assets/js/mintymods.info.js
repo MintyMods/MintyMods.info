@@ -9,16 +9,93 @@ function initMintyModsInfo() {
     PNotify.defaults.styling = 'material';
     PNotify.defaults.icons = 'fontawesome5'; // Font Awesome 5
     makeGitHubRibbenTooltip();
-
 }
+
 $("#download").click(function () {
-    PNotify.notice({
-        text: "Currently unavailable for download. See below for a demo of the current prototype.",
-        shadow: true,
-        icon: 'fal fa-info-circle fa-2x'
+    var notice = PNotify.notice({
+        title: 'Project Status : ALPHA',
+        text: 'Currently unavailable for download - Feel free to try out the latest prototype by clicking here or the demo link below',
+        icon: 'fad fa-laptop-code fa-2x',
+        shadow: true
+    });
+    notice.refs.elem.style.cursor = 'pointer';
+    notice.on('click', function (e) {
+        if ($(e.target).is('.ui-pnotify-closer *, .ui-pnotify-sticker *')) {
+            return;
+        }
+        notice.update({
+            type: 'info',
+            text: '<ul class="actions special"><li><a href="demo.html" title="Early prototype of the application" class="tooltip button primary icon fa-lightbulb-on">View Online Demo</a></li></ul>',
+            textTrusted: true
+        });
     });
 });
 
+
+/* Demo Notifications */
+$("#minty-notice").click(function () {
+    PNotify.success({
+        title: "This is a Simple Notice",
+        text: "Alerts can be configured for different levels e.g. Notice, Information, Warning, Critical, Fatal",
+        shadow: true,
+        addClass: 'minty-notification',
+        icon: 'fad fa-comments-alt fa-2x'
+    });
+});
+
+$("#minty-info").click(function () {
+    PNotify.info({
+        title: "S.M.A.R.T.: Samsung SSD 960 EVO 250GB (S3ESNX0J518212P)",
+        text: "Drive Remaining Life [ 49.9543% ] is below your INFO limit of [ 50% ]",
+        shadow: true,
+        addClass: 'translucent',
+        icon: 'fas fa-heart-rate fa-2x'
+    });
+});
+
+$("#minty-warn").click(function () {
+    PNotify.notice({
+        title: "CPU [#0]: Intel Core i7-7700K: DTS",
+        text: "Core #0 Thermal Throttling [ true ] is inside your WARN range of [ true ]",
+        shadow: true,
+        addClass: 'translucent',
+        icon: 'fad fa-temperature-hot fa-2x'
+    });
+});
+
+$("#minty-critical").click(function () {
+    PNotify.error({
+        title: "GPU [#0]: NVIDIA GeForce RTX 2080 Ti:",
+        text: "GPU Fan0 [ 0 rpm ] is below your CRITICAL range of [ 250 rpm ]",
+        shadow: true,
+        addClass: 'translucent',
+        icon: 'fas fa-fan fa-2x'
+    });
+});
+
+$("#minty-fatal").click(function () {
+    if (typeof window.stackBarTop === 'undefined') {
+        window.stackBarTop = {
+            'dir1': 'down',
+            'firstpos1': 0,
+            'spacing1': 0,
+            'push': 'top'
+        };
+    }
+    var opts = {
+        title: 'GIGABYTE Z270X-Gaming 7 (ITE IT8686E)',
+        text: "HPWR Pump [ 132 rpm ] is below your FATAL limit of [ 600 rpm ]",
+        addClass: 'stack-bar-top',
+        type: 'error',
+        cornerClass: 'ui-pnotify-sharp',
+        shadow: true,
+        width: '100vw',
+        icon: 'fad fa-asterisk fa-2x',
+        stack: window.stackBarTop
+    };
+    PNotify.alert(opts);
+});
+/* End Demo Notifications */
 
 function makeGitHubRibbenTooltip() {
     var corner = $('.github-corner');
