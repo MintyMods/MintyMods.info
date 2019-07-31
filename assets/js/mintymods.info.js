@@ -49,7 +49,7 @@ $("#minty-info").click(function () {
         text: "Drive Remaining Life [ 49.9543% ] is below your INFO limit of [ 50% ]",
         shadow: true,
         addClass: 'translucent',
-        icon: 'fas fa-heart-rate fa-2x'
+        icon: 'fad fa-heart-rate fa-2x'
     });
 });
 
@@ -69,7 +69,7 @@ $("#minty-critical").click(function () {
         text: "GPU Fan0 [ 0 rpm ] is below your CRITICAL range of [ 250 rpm ]",
         shadow: true,
         addClass: 'translucent',
-        icon: 'fas fa-fan fa-2x'
+        icon: 'fad fa-fan fa-2x'
     });
 });
 
@@ -193,20 +193,20 @@ $(document).ready(function () {
 function getUnsupportedBrowserIcon() {
     // https://github.com/GoogleChrome/dialog-polyfill
     if (browser.name == "chrome") {
-       return "fab fa-chrome fa-2x";
+        return "fab fa-chrome fa-2x";
     } else if (browser.name == "mozilla") {
-       return "fab fa-firefox fa-2x";
+        return "fab fa-firefox fa-2x";
     } else if (browser.name == "edge") {
-       return "fab fa-edge fa-2x"; 
+        return "fab fa-edge fa-2x";
     } else if (browser.name == "ie") {
-       return "fab fa-internet-explorer fa-2x";
+        return "fab fa-internet-explorer fa-2x";
     } else if (browser.name == "opera") {
         return "fab fa-opera fa-2x";
     } else if (browser.name == "safari") {
-        return "fab fa-safari fa-2x";       
+        return "fab fa-safari fa-2x";
     } else {
         return "fas fa-exclamation-triangle fa-2x";
-   }
+    }
 }
 
 // Contact Form Handling
@@ -223,7 +223,7 @@ function getUnsupportedBrowserIcon() {
                 text: "The 'dialog' API is not supported by this browser - update your browser to a more secure modern browser",
                 shadow: true,
                 icon: getUnsupportedBrowserIcon()
-            });            
+            });
         }
     });
 
@@ -242,7 +242,7 @@ function getUnsupportedBrowserIcon() {
                     text: "Your message has been sent. Thank You!",
                     shadow: true,
                     icon: 'fal fa-inbox-out'
-                });                   
+                });
                 contactDialog.close();
             });
 
