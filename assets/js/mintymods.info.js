@@ -16,6 +16,7 @@ $("#download").click(function () {
         title: 'Project Status : ALPHA',
         text: 'Currently unavailable for download - Feel free to try out the latest prototype by clicking here or the demo link below',
         icon: 'fad fa-laptop-code fa-2x',
+        addClass: 'minty-notification ',
         shadow: true
     });
     notice.refs.elem.style.cursor = 'pointer';
@@ -25,8 +26,10 @@ $("#download").click(function () {
         }
         notice.update({
             type: 'info',
-            text: '<ul class="actions special"><li><a href="demo.html" title="Early prototype of the application" class="tooltip button primary icon fa-lightbulb-on">View Online Demo</a></li></ul>',
-            textTrusted: true
+            text: '<ul class="actions special"><li><a href="demo/demo.html" title="Very early prototype of the application" class="tooltip button primary icon fa-lightbulb-on">View Online Demo</a></li></ul>',
+            addClass: 'minty-notification ',
+            textTrusted: true,
+            shadow: true
         });
     });
 });
@@ -38,7 +41,7 @@ $("#minty-notice").click(function () {
         title: "This is a Simple Notice",
         text: "Alerts can be configured for different levels e.g. Notice, Information, Warning, Critical, Fatal",
         shadow: true,
-        addClass: 'minty-notification',
+        addClass: 'minty-notification ',
         icon: 'fad fa-comments-alt fa-2x'
     });
 });
@@ -48,7 +51,7 @@ $("#minty-info").click(function () {
         title: "S.M.A.R.T.: Samsung SSD 960 EVO 250GB (S3ESNX0J518212P)",
         text: "Drive Remaining Life [ 49.9543% ] is below your INFO limit of [ 50% ]",
         shadow: true,
-        addClass: 'translucent',
+        addClass: 'minty-notification ',
         icon: 'fad fa-heart-rate fa-2x'
     });
 });
@@ -56,9 +59,9 @@ $("#minty-info").click(function () {
 $("#minty-warn").click(function () {
     PNotify.notice({
         title: "CPU [#0]: Intel Core i7-7700K: DTS",
-        text: "Core #0 Thermal Throttling [ true ] is inside your WARN range of [ true ]",
+        text: "Core #0 Thermal Throttling [ true ] has reached your WARN range of [ true ]",
         shadow: true,
-        addClass: 'translucent',
+        addClass: 'minty-notification ',
         icon: 'fad fa-temperature-hot fa-2x'
     });
 });
@@ -66,9 +69,9 @@ $("#minty-warn").click(function () {
 $("#minty-critical").click(function () {
     PNotify.error({
         title: "GPU [#0]: NVIDIA GeForce RTX 2080 Ti:",
-        text: "GPU Fan0 [ 0 rpm ] is below your CRITICAL range of [ 250 rpm ]",
+        text: "GPU Fan0 [ 237 rpm ] is below your CRITICAL range of [ 250 rpm ]",
         shadow: true,
-        addClass: 'translucent',
+        addClass: 'minty-notification ',
         icon: 'fad fa-fan fa-2x'
     });
 });
@@ -87,7 +90,7 @@ $("#minty-fatal").click(function () {
         text: "HPWR Pump [ 132 rpm ] is below your FATAL limit of [ 600 rpm ]",
         addClass: 'stack-bar-top',
         type: 'error',
-        cornerClass: 'ui-pnotify-sharp',
+        cornerClass: 'ui-pnotify-sharp minty-notification ',
         shadow: true,
         width: '100vw',
         icon: 'fad fa-asterisk fa-2x',
