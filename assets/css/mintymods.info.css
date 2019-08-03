@@ -182,6 +182,7 @@ body {
 
 /* Contact Dialog */
 #contactDialog {
+
     border-radius: 0.6rem;
     left: 50%;
     transform: translate(-50%, -0%);
@@ -194,10 +195,15 @@ body {
 }
 
 dialog {
+    display: none;
     padding: 5px;
     box-shadow: inset 0 0 0 2px #e6e6e6;
     border-radius: 10px;
     border-color: rgba(0, 0, 0, 0.5);
+}
+
+dialog[open] {
+    display: inline-block;
 }
 
 dialog div {
@@ -275,13 +281,18 @@ dialog div {
         5px 5px 50px #4696e5, -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white !important;
 }
 
+
+
 .fa-github:hover,
-.fa-github-alt:hover {
+.fa-github-alt:hover,
+.license:hover,
+.template:hover {
     color: black !important;
     text-shadow: 0px 0px 50px greenyellow,
         5px 5px 50px #4696e5;
 
 }
+
 
 .fa-steam:hover {
     color: #00adee !important;
