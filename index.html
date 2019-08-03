@@ -21,7 +21,7 @@
     <header id="header">
         <div class="content">
             <h1><span class="minty-mss-text">MSS</span> - Minty Sensor Server</h1>
-            <h2 class="mss-tag-line">Computer Hardware Sensors Recorded & Delivered</h2>
+            <h2 class="mss-tag-line">PC Hardware Sensors Recorded & Delivered</h2>
             <p>History, Charts, Notifications, Gauges<br />Desktop Alerts, RESTfull API</p>
             <ul class="actions">
                 <li><a id="download" class="button primary icon solid fa-download">Download</a></li>
@@ -31,16 +31,17 @@
     </header>
     <section id="one" class="wrapper style2 special">
         <header class="major">
-            <h2>Temperatures, Voltages, Fan Speeds, Currents, Power, Clock Speeds, Usages</h2>
+            <h2>Triggers, Temperatures, Voltages, Fan Speeds, Currents, Power, Clock Speeds, Usages</h2>
         </header>
         <ul class="icons major">
-            <li><span class="tooltip icon solid fal fa-thermometer-half" title=""><span class="label">Temperatures</span></span></li>
-            <li><span class="tooltip icon solid fal fa-bolt" title=""><span class="label">Voltages</span></span></li>
-            <li><span class="tooltip icon solid fal fa-fan" title=""><span class="label">Fan Speeds</span></span></li>
-            <li><span class="tooltip icon solid fal fa-wave-square" title=""><span class="label">Currents</span></span></li>
-            <li><span class="tooltip icon solid fal fa-car-battery" title=""><span class="label">Power</span></span></li>
-            <li><span class="tooltip icon solid fal fa-clock" title=""><span class="label">Clocks</span></span></li>
-            <li><span class="tooltip icon solid fal fa-chart-pie" title=""><span class="label">Usages</span></span></li>
+            <li><span class="tooltip icon solid fal fa-location" title="Triggers - Thermal throttling, Memory load, Drive failure, Download rate, etc."><span class="label">Triggers</span></span></li>
+            <li><span class="tooltip icon solid fal fa-thermometer-half" title="Temperatures - Motherboard, CPU, GPU, Memory, Disks, Water temps, etc."><span class="label">Temperatures</span></span></li>
+            <li><span class="tooltip icon solid fal fa-wave-square" title="Voltages - Vcore, +3,3V, +12v, +5v, DDR, PCH Core, VBAT, etc."><span class="label">Voltages</span></span></li>
+            <li><span class="tooltip icon solid fal fa-fan" title="Fans - System, CPU_OPT, GPU, VRM, Chasis, etc."><span class="label">Fan Speeds</span></span></li>
+            <!--li><span class="tooltip icon solid fal fa-wave-square" title=""><span class="label">Currents</span></span></li-->
+            <li><span class="tooltip icon solid fal fa-bolt" title="Power - CPU Package, IA Cores, DRAM, GPU, etc."><span class="label">Power</span></span></li>
+            <li><span class="tooltip icon solid fal fa-clock" title="Clocks - Core, BUS, Memory, GPU, System, etc."><span class="label">Clocks</span></span></li>
+            <li><span class="tooltip icon solid fal fa-chart-pie" title="Usages - Max CPU, Thread, Drive Activity, Remaining Life, etc. "><span class="label">Usages</span></span></li>
         </ul>
     </section>
     <section id="two" class="wrapper">
@@ -112,7 +113,6 @@
     <section class="wrapper special">
         <header class="major">
             <h2><i class="fal fa-digging fa-flip-horizontal"></i> This site is currently Under Construction <i class="fal fa-digging"></i></h2>
-
         </header>
     </section>
     <dialog id="contactDialog">
@@ -148,7 +148,11 @@
             <li><a href="https://www.reddit.com/user/MintyMods" title="MintyMods Reddit Page" class="tooltip icon brands fab fa-reddit"><span class="label">Reddit</span></a></li>
         </ul>
         <!-- DO NOT REMOVE - LICENSE : Fractal by HTML5 UP - html5up.net | @ajlkn - Free for personal and commercial use under the CCA 3.0 license (html5up.net/license) -->
-        <div>Source: <a href="https://github.com/MintyMods/MintyMods.info" class="tooltip fab fa-github-alt" title="MintyMods.info"> GitHub</a> License: <a class="tooltip" title="GNU General Public License Version 3.0">GNU v3.0</a> - Template <span class="tooltip copyright template" title="Site design based on Fractal by HTML5 UP">Fractal by <a href="http://html5up.net">HTML5 UP</a></span></div>
+        <ul>
+            <li>Source: <a href="https://github.com/MintyMods/MintyMods.info" class="tooltip fab fa-github-alt" title="MintyMods.info"> GitHub</a></li>
+            <li>License: <a href="https://www.gnu.org/licenses/gpl-3.0.en.html" class="tooltip" title="GNU General Public License Version 3.0">GNU v3.0</a></li>
+            <li>Template: <a href="http://html5up.net" class="tooltip copyright template" title="MinytMods.info is based on the Fractal template by HTML5 UP">HTML5 UP</a></li>
+        </ul>
     </footer>
     <script src="https://kit.fontawesome.com/2007ef201b.js"></script>
     <script src="assets/js/jquery.min.js"></script>
@@ -166,5 +170,8 @@
         $(document).ready(function() {
             initMintyModsInfo();
         });
+
     </script>
-</body></html>
+</body>
+
+</html>

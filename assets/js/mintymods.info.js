@@ -13,8 +13,8 @@ function initMintyModsInfo() {
 
 $("#download").click(function () {
     var notice = PNotify.notice({
-        title: 'Project Status : ALPHA',
-        text: 'Currently unavailable for download - Feel free to try out the latest prototype by clicking here or the demo link below',
+        title: 'Project Status :     ALPHA',
+        text: 'Currently unavailable for download - Feel free to try out the latest online prototype by clicking here or via the demo link at the bottom of the page',
         icon: 'fad fa-laptop-code fa-2x',
         addClass: 'minty-notification ',
         shadow: true
