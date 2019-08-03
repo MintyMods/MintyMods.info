@@ -11,6 +11,8 @@ function initMintyModsInfo() {
     makeGitHubRibbenTooltip();
 }
 
+
+
 $("#download").click(function () {
     var notice = PNotify.notice({
         title: 'Project Status :     ALPHA',
@@ -252,3 +254,24 @@ function getUnsupportedBrowserIcon() {
         });
     });
 })();
+
+function calculateLogoSvgCss() {
+    const id = 'minty-banner-svg';
+    const fill_delay = 2;
+    const stroke_delay = 0.1;
+    const outline_delay = 0.5;
+    const logo = $('#' + id + ' path');
+    var css = "#minty-banner-svg { animation: fill " + fill_delay + "s ease forwards " + (logo.length * stroke_delay) + "s; }";
+    for (let i = 0; i < logo.length; i++) {
+        console.log("Letter " + (i + 1) + " is " + logo[i].getTotalLength());
+        css += "#" + id + " path:nth-child(" + (i + 1) + ") {";
+        css += " stroke-dasharray: " + logo[i].getTotalLength() + ";";
+        css += " stroke-dashoffset: " + logo[i].getTotalLength() + ";";
+        css += " animation: line-anim " + outline_delay + "s ease forwards " + (i * stroke_delay) + "s";
+        if (i < 3) {
+            css += ", fill-mss " + fill_delay + "s ease forwards " + (logo.length * stroke_delay) + "s";
+        }
+        css += "; }";
+    }
+    $('.content').html(css);
+}
