@@ -19,8 +19,18 @@ body {
     font-weight: 900;
 }
 
+
+.minty-banner-tagline {
+    display: none;
+    < !--[if IE] > display: inline-block< ![endif]-->
+}
+
 .mss-tag-line {
     font-variant-caps: all-small-caps;
+}
+
+.minty-mss-text {
+    color: rgba(173, 255, 47, 1);
 }
 
 /* -- create the minty tool tips -- */
@@ -186,7 +196,7 @@ body {
     border-radius: 0.6rem;
     left: 50%;
     transform: translate(-50%, -0%);
-    box-shadow: 0 0 2em black;
+    box-shadow: 0 0 2em rgba(0, 0, 0, 1);
 }
 
 .contact-dialog-title {
