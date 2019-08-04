@@ -30,6 +30,7 @@ $("#download").click(function () {
             type: 'info',
             text: '<ul class="actions special"><li><a href="demo/demo.html" title="Very early prototype of the application" class="tooltip button primary icon fa-lightbulb-on">View Online Demo</a></li></ul>',
             addClass: 'minty-notification ',
+            icon: 'fad fa-eye fa-2x',
             textTrusted: true,
             shadow: true
         });
@@ -37,13 +38,13 @@ $("#download").click(function () {
 
 });
 
-
 /* Demo Notifications */
 $("#minty-notice").click(function () {
     PNotify.success({
         title: "This is a Simple Notice",
-        text: "Alerts can be configured for different levels e.g. Notice, Information, Warning, Critical, Fatal",
+        text: "Different types of alerts can be configured for different levels e.g.<ul class='notice-icons'><li><i class='fad fa-question-circle'></i> Notice</li><li><i class='fad fa-info-circle'></i> Information</li><li><i class='fad fa-exclamation-circle'></i> Warning</li><li><i class='fad fa-engine-warning'></i> Critical</li><li><i class='fad fa-exclamation-triangle'></i> Fatal</li></ul>",
         shadow: true,
+        textTrusted: true,
         addClass: 'minty-notification ',
         icon: 'fad fa-comments-alt fa-2x'
     });
@@ -52,7 +53,8 @@ $("#minty-notice").click(function () {
 $("#minty-info").click(function () {
     PNotify.info({
         title: "S.M.A.R.T.: Samsung SSD 960 EVO 250GB (S3ESNX0J518212P)",
-        text: "Drive Remaining Life [ 49.9543% ] is below your INFO limit of [ 50% ]",
+        text: "Drive Remaining Life [ 49.9543% ]<br/>INFO limit [ < 50% ]",
+        textTrusted: true,
         shadow: true,
         addClass: 'minty-notification ',
         icon: 'fad fa-heart-rate fa-2x'
@@ -62,8 +64,9 @@ $("#minty-info").click(function () {
 $("#minty-warn").click(function () {
     PNotify.notice({
         title: "CPU [#0]: Intel Core i7-7700K: DTS",
-        text: "Core #0 Thermal Throttling [ true ] has reached your WARN range of [ true ]",
+        text: "Core #0 Thermal Throttling [ true ]<br/>WARN range [ = true ]",
         shadow: true,
+        textTrusted: true,
         addClass: 'minty-notification ',
         icon: 'fad fa-temperature-hot fa-2x'
     });
@@ -72,8 +75,9 @@ $("#minty-warn").click(function () {
 $("#minty-critical").click(function () {
     PNotify.error({
         title: "GPU [#0]: NVIDIA GeForce RTX 2080 Ti:",
-        text: "GPU Fan0 [ 237 rpm ] is below your CRITICAL range of [ 250 rpm ]",
+        text: "GPU Fan0 [ 237 rpm ]<br/>CRITICAL range [ < 250 rpm ]",
         shadow: true,
+        textTrusted: true,
         addClass: 'minty-notification ',
         icon: 'fad fa-fan fa-2x'
     });
@@ -90,11 +94,12 @@ $("#minty-fatal").click(function () {
     }
     var opts = {
         title: 'GIGABYTE Z270X-Gaming 7 (ITE IT8686E)',
-        text: "HPWR Pump [ 132 rpm ] is below your FATAL limit of [ 600 rpm ]",
+        text: "HPWR Pump [ 132 rpm ]<br/>FATAL limit [ < 600 rpm ]",
         addClass: 'stack-bar-top',
         type: 'error',
         cornerClass: 'ui-pnotify-sharp minty-notification ',
         shadow: true,
+        textTrusted: true,
         width: '100vw',
         icon: 'fad fa-asterisk fa-2x',
         stack: window.stackBarTop

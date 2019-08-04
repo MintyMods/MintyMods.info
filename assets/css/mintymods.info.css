@@ -155,6 +155,18 @@ body {
 
 }
 
+.notice-icons {
+    list-style: none;
+    vertical-align: middle;
+    font-size: 1.5em;
+    margin: 2px;
+}
+
+ul.notice-icons > li * {
+    font-size: 1em;
+    margin: 5px;
+}
+
 .ui-pnotify-icon {
     padding: 0 15px 0 5px;
 }
