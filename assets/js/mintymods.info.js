@@ -257,21 +257,20 @@ function getUnsupportedBrowserIcon() {
 
 function calculateLogoSvgCss() {
     const id = 'minty-banner-svg';
-    const fill_delay = 2;
+    const alt_chars = 3;
+    const fill_delay = 1;
     const stroke_delay = 0.1;
     const outline_delay = 0.5;
     const logo = $('#' + id + ' path');
-    var css = "#minty-banner-svg { animation: fill " + fill_delay + "s ease forwards " + (logo.length * stroke_delay) + "s; }";
+    //var css = "#minty-banner-svg { animation: fill " + fill_delay + "s ease forwards " + (logo.length * stroke_delay) + "s; }";
+    var css = "";
     for (let i = 0; i < logo.length; i++) {
-        console.log("Letter " + (i + 1) + " is " + logo[i].getTotalLength());
         css += "#" + id + " path:nth-child(" + (i + 1) + ") {";
         css += " stroke-dasharray: " + logo[i].getTotalLength() + ";";
         css += " stroke-dashoffset: " + logo[i].getTotalLength() + ";";
-        css += " animation: line-anim " + outline_delay + "s ease forwards " + (i * stroke_delay) + "s";
-        if (i < 3) {
-            css += ", fill-mss " + fill_delay + "s ease forwards " + (logo.length * stroke_delay) + "s";
-        }
-        css += "; }";
+        css += " animation: line-anim " + fill_delay + "s ease forwards " + (i * stroke_delay) + "s";
+        css += ", fill" + ((i < alt_chars) ? "-mss " : " ") + fill_delay + "s ease forwards " + ((i * stroke_delay) + outline_delay) + "s, "
+        css += "after-effects" + ((i < alt_chars) ? "-mss " : " ") + outline_delay + "s ease forwards " + ((i * stroke_delay) + (i * stroke_delay)) + "s;}";
     }
     $('.content').html(css);
 }
