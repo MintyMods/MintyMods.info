@@ -35,8 +35,6 @@ $("#download").click(function () {
         });
     });
 
-    // REMOVE ME!!
-    calculateLogoSvgCss();
 });
 
 
