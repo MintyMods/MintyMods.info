@@ -27,7 +27,11 @@ body {
 
 .mss-tag-line {
     font-variant-caps: all-small-caps;
-    text-shadow: .5px .5px .5px black;
+    text-shadow: .5px .5px .5px rgba(0, 0, 0, 1);
+}
+
+.mss-tag-line-2 {
+    text-shadow: .5px .5px .5px rgba(0, 0, 0, 1);
 }
 
 .minty-mss-text {
