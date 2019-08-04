@@ -34,6 +34,9 @@ $("#download").click(function () {
             shadow: true
         });
     });
+
+    // REMOVE ME!!
+    calculateLogoSvgCss();
 });
 
 
@@ -270,7 +273,7 @@ function calculateLogoSvgCss() {
         css += " stroke-dashoffset: " + logo[i].getTotalLength() + ";";
         css += " animation: line-anim " + fill_delay + "s ease forwards " + (i * stroke_delay) + "s";
         css += ", fill" + ((i < alt_chars) ? "-mss " : " ") + fill_delay + "s ease forwards " + ((i * stroke_delay) + outline_delay) + "s, "
-        css += "after-effects" + ((i < alt_chars) ? "-mss " : " ") + outline_delay + "s ease forwards " + ((i * stroke_delay) + (i * stroke_delay)) + "s;}";
+        css += "after-effects" + ((i < alt_chars) ? "-mss " : " ") + outline_delay + "s ease forwards " + ((i * stroke_delay)) + "s;}";
     }
     $('.content').html(css);
 }
