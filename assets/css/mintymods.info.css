@@ -190,7 +190,6 @@ ul.notice-icons > li * {
 }
 
 #hwinfo-icon {
-    background-color: transparent;
     background: url("/assets/img/hwinfo_flat.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -233,9 +232,6 @@ ul.notice-icons > li * {
     width: 50px;
     text-transform: capitalize;
 }
-
-
-
 
 /* keep project icons vertical on mobile */
 @media screen and (max-width: 736px) and (orientation: portrait) {

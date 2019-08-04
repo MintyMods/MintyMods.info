@@ -71,10 +71,10 @@
         </header>
         <ul class="icons major">
             <li><span class="tooltip icon solid fal fa-thermometer-half" title="TEMPERATURES: Motherboard, CPU, GPU, Memory, Disks, Water temps, etc."><span class="label">Temperatures</span></span></li>
-            <li><span class="tooltip icon solid fal fa-wave-square" title="VOLTAGES: Vcore, +3,3V, +12v, +5v, DDR, PCH Core, VBAT, etc."><span class="label">Voltages</span></span></li>
+            <li><span class="tooltip icon solid fal fa-bolt" title="VOLTAGES: Vcore, +3,3V, +12v, +5v, DDR, PCH Core, VBAT, etc."><span class="label">Voltages</span></span></li>
             <li><span class="tooltip icon solid fal fa-fan" title="FANS: System, CPU_OPT, GPU, VRM, Chasis, etc."><span class="label">Fan Speeds</span></span></li>
-            <!--li><span class="tooltip icon solid fal fa-wave-square" title=""><span class="label">Currents</span></span></li-->
-            <li><span class="tooltip icon solid fal fa-bolt" title="POWER: CPU Package, IA Cores, DRAM, GPU, etc."><span class="label">Power</span></span></li>
+            <li><span class="tooltip icon solid fal fa-wave-square" title="CURRENTS: CPU, GPU, Motherboard, etc."><span class="label">Currents</span></span></li>
+            <li><span class="tooltip icon solid fa fa-battery-bolt" title="POWER: CPU Package, IA Cores, DRAM, GPU, etc."><span class="label">Power</span></span></li>
             <li><span class="tooltip icon solid fal fa-clock" title="CLOCKS: Core, BUS, Memory, GPU, System, etc."><span class="label">Clocks</span></span></li>
             <li><span class="tooltip icon solid fal fa-chart-pie" title="USAGES: Max CPU, Thread, Drive Activity, Remaining Life, etc. "><span class="label">Usages</span></span></li>
             <li><span class="tooltip icon solid fal fa-location" title="TRIGGERS: Thermal throttling, Memory load, Drive failure, Download rate, etc."><span class="label">Triggers</span></span></li>
@@ -128,21 +128,12 @@
                 </div>
             </section>
             <section class="special">
-                <h2><i class="fal fa-question-circle"></i> See the following projects for more information</h2>
+                <h2>More Information <i class="fal fa-question-circle"></i> See the following projects</h2>
                 <ul class="icons labeled minty-projects">
                     <li title="Minty Sensor Server" class="tooltip"><a href="https://github.com/MintyMods/MintySensorServer" class="icon solid fal fa-server"></a></li>
                     <li title="Minty Jni Wrapper" class="tooltip"><a href="https://github.com/MintyMods/MintySm2MintySsJniWrapper" class="icon solid fal fa-handshake-alt"></a></li>
                     <li title="Minty Sensor Monitor" class="tooltip"><a href="https://github.com/MintyMods/MintySensorMonitor" class="icon solid fal fa-analytics"></a></li>
-                    <li title="HWiNFO" class="tooltip">
-                        <a href="https://www.hwinfo.com/" class="icon solid hwinfo-icon">
-                            <div id="hwinfo-icon"></div>
-                        </a>
-                    </li>
-             <li title="HWiNFO" class="tooltip">
-                        <a href="https://www.hwinfo.com/" class="icon solid hwinfo-icon">
-                            <div id="hwinfo-icon"></div>
-                        </a>
-                    </li>                    
+                    <li title="HWiNFO" class="tooltip"><a href="https://www.hwinfo.com/" id="hwinfo-icon" class="icon solid hwinfo-icon"></a></li>
                     <!--li title="GPU-Z" class="tooltip"><a href="https://www.techpowerup.com/gpuz/" class="icon solid fal fa-user-shield"></a></li>
                     <li title="Open Hardware Monitor" class="tooltip"><a href="https://openhardwaremonitor.org/" class="icon solid fal fa-microchip"></a></li-->
                 </ul>
@@ -199,6 +190,7 @@
             <li>Template: <a href="http://html5up.net" class="tooltip copyright template" title="MinytMods.info is based on the Fractal template by HTML5 UP">HTML5 UP</a></li>
         </ul>
     </footer>
+    <script src="https://kit.fontawesome.com/2007ef201b.js"></script>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
@@ -211,7 +203,7 @@
     <script src="assets/pnotify/dist/iife/PNotifyMobile.js"></script>
     <script src="assets/pnotify/dist/iife/PNotifyStyleMaterial.js"></script>
     <script src="assets/js/mintymods.info.js"></script>
-    <script src="https://kit.fontawesome.com/2007ef201b.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function() {
             initMintyModsInfo();

@@ -14,9 +14,10 @@ function initMintyModsInfo() {
 
 
 $("#download").click(function () {
-    var notice = PNotify.notice({
-        title: 'Project Status :     ALPHA',
-        text: '<b style="color:red">Currently unavailable for download</b><br/>Click here to try out an online demo of the current prototype',
+    var notice = PNotify.success({
+        title: '<span style="color:white">Project Status :</span>     <span style="color:yellow">ALPHA</span>',
+        text: '<b style="color:white">Currently unavailable for download</b><br/><br/><span style="color:greenyellow;text-align:center">Click here to try out an online demo of the current prototype</span>',
+        titleTrusted: true,
         textTrusted: true,
         icon: 'fad fa-laptop-code fa-2x',
         addClass: 'minty-notification ',
@@ -28,7 +29,7 @@ $("#download").click(function () {
             return;
         }
         notice.update({
-            type: 'notice',
+            type: 'info',
             text: '<ul class="actions special"><li><a href="demo/demo.html" title="Very early prototype of the application" class="tooltip button primary icon fa-lightbulb-on">View Online Demo</a></li></ul>',
             addClass: 'minty-notification ',
             icon: 'fad fa-eye fa-2x',
