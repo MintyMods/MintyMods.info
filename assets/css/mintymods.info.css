@@ -54,6 +54,46 @@ body {
 
 /* -- End create the minty tool tips -- */
 
+/* PNotify Message Styling */
+.minty-msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    position: relative;
+}
+
+.minty-msg-notice {}
+
+.minty-msg-info {}
+
+.minty-msg-info:before {
+    content: "\f05a";
+    font-family: "Font Awesome 5 Pro";
+    font-size: 10em;
+    opacity: .2;
+    z-index: 2;
+    text-shadow: 2px 2px #ff0000;
+    justify-content: center;
+    align-items: stretch;
+
+}
+
+.minty-msg-warn {
+    position: relative;
+}
+
+.minty-msg-critical {
+    position: relative;
+}
+
+.minty-msg-fatal {
+    position: relative;
+}
+
+/* PNotify Message Styling */
+
 
 /* Minty Notifications */
 .minty-notification {

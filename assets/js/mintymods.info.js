@@ -47,7 +47,7 @@ $("#minty-notice").click(function () {
         text: "Different types of alerts can be configured for different levels e.g.<ul class='notice-icons'><li><i class='fad fa-question-circle'></i> Notice</li><li><i class='fad fa-info-circle'></i> Information</li><li><i class='fad fa-exclamation-circle'></i> Warning</li><li><i class='fad fa-engine-warning'></i> Critical</li><li><i class='fad fa-exclamation-triangle'></i> Fatal</li></ul>",
         shadow: true,
         textTrusted: true,
-        addClass: 'minty-notification ',
+        addClass: 'minty-msg minty-msg-notice ',
         icon: 'fad fa-comments-alt fa-2x'
     });
 });
@@ -58,7 +58,7 @@ $("#minty-info").click(function () {
         text: "Drive Remaining Life [ 49.9543% ]<br/>INFO limit [ < 50% ]",
         textTrusted: true,
         shadow: true,
-        addClass: 'minty-notification ',
+        addClass: 'minty-msg minty-msg-info',
         icon: 'fad fa-heart-rate fa-2x'
     });
 });
@@ -69,7 +69,7 @@ $("#minty-warn").click(function () {
         text: "Core #0 Thermal Throttling [ true ]<br/>WARN range [ = true ]",
         shadow: true,
         textTrusted: true,
-        addClass: 'minty-notification ',
+        addClass: 'minty-msg minty-msg-warn',
         icon: 'fad fa-temperature-hot fa-2x'
     });
 });
@@ -80,7 +80,7 @@ $("#minty-critical").click(function () {
         text: "GPU Fan0 [ 237 rpm ]<br/>CRITICAL range [ < 250 rpm ]",
         shadow: true,
         textTrusted: true,
-        addClass: 'minty-notification ',
+        addClass: 'minty-msg minty-msg-critical',
         icon: 'fad fa-fan fa-2x'
     });
 });
@@ -97,9 +97,9 @@ $("#minty-fatal").click(function () {
     var opts = {
         title: 'GIGABYTE Z270X-Gaming 7 (ITE IT8686E)',
         text: "HPWR Pump [ 132 rpm ]<br/>FATAL limit [ < 600 rpm ]",
-        addClass: 'stack-bar-top',
+        addClass: 'stack-bar-top minty-msg minty-msg-fatal',
         type: 'error',
-        cornerClass: 'ui-pnotify-sharp minty-notification ',
+        cornerClass: 'ui-pnotify-sharp ',
         shadow: true,
         textTrusted: true,
         width: '100vw',
