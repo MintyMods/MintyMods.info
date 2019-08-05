@@ -11,15 +11,11 @@ body {
     height: 100vh;
 }
 
-
-
 .mss-logo {
     position: relative;
     letter-spacing: 3px;
     font-weight: 900;
 }
-
-
 
 .minty-banner-tagline {
     display: none;
@@ -56,41 +52,49 @@ body {
 
 /* PNotify Message Styling */
 .minty-msg {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    position: relative;
 }
 
-.minty-msg-notice {}
+.minty-msg-notice .ui-pnotify-title {
+    color: white;
+    text-shadow: 0px 0px 1px white, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
-.minty-msg-info {}
+.minty-msg-info .ui-pnotify-title {
+    color: white;
+    text-shadow: 0px 0px 1px white, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
-.minty-msg-info:before {
-    content: "\f05a";
+.minty-msg-warn .ui-pnotify-title {
+    color: white;
+    text-shadow: 0px 0px 1px white, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.minty-msg-critical .ui-pnotify-title {
+    color: white;
+    text-shadow: 0px 0px 1px white, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.minty-msg-fatal .ui-pnotify-title {
+    color: yellow;
+    text-shadow: 0px 0px 1px white, -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.minty-msg-fatal:before {
+    content: "\f071";
     font-family: "Font Awesome 5 Pro";
-    font-size: 10em;
-    opacity: .2;
+    font-size: 5em;
+    font-weight: 900;
+    opacity: .5;
+    color: yellow;
     z-index: 2;
-    text-shadow: 2px 2px #ff0000;
-    justify-content: center;
-    align-items: stretch;
-
+    position: absolute !important;
+    right: 50px;
 }
 
-.minty-msg-warn {
-    position: relative;
-}
-
-.minty-msg-critical {
-    position: relative;
-}
-
-.minty-msg-fatal {
-    position: relative;
-}
 
 /* PNotify Message Styling */
 

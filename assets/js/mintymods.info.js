@@ -77,7 +77,7 @@ $("#minty-warn").click(function () {
 $("#minty-critical").click(function () {
     PNotify.error({
         title: "GPU [#0]: NVIDIA GeForce RTX 2080 Ti:",
-        text: "GPU Fan0 [ 237 rpm ]<br/>CRITICAL range [ < 250 rpm ]",
+        text: "GPU Fan 0 [ 237 rpm ]<br/>CRITICAL range [ < 250 rpm ]",
         shadow: true,
         textTrusted: true,
         addClass: 'minty-msg minty-msg-critical',
@@ -96,7 +96,7 @@ $("#minty-fatal").click(function () {
     }
     var opts = {
         title: 'GIGABYTE Z270X-Gaming 7 (ITE IT8686E)',
-        text: "HPWR Pump [ 132 rpm ]<br/>FATAL limit [ < 600 rpm ]",
+        text: "HPWR Water Pump [ 132 rpm ]<br/>FATAL limit [ < 600 rpm ]",
         addClass: 'stack-bar-top minty-msg minty-msg-fatal',
         type: 'error',
         cornerClass: 'ui-pnotify-sharp ',
