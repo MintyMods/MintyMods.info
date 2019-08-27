@@ -24,12 +24,12 @@
 		@if ($category == brands) {
 			font-family: 'Font Awesome 5 Brands';
 		}
-		@elseif ($category == solid) {
-			font-family: 'Font Awesome 5 Free';
+		@else if ($category == solid) {
+			font-family: 'Font Awesome 5 Pro';
 			font-weight: 900;
 		}
 		@else {
-			font-family: 'Font Awesome 5 Free';
+			font-family: 'Font Awesome 5 Pro';
 			font-weight: 400;
 		}
 
