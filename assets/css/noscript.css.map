@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAOA;;;;EAIE;AAEF,YAAY;AAIT,gCAAS;ECsVD,cAAsB,EAAE,IAA+C;EAAvE,iBAAsB,EAAE,IAA+C;EAAvE,aAAsB,EAAE,IAA+C;EAAvE,SAAsB,EAAE,IAA+C;EDpV9E,OAAO,EAAE,CAAC;AAGX,8BAAO;ECiVC,cAAsB,EAAE,IAA+C;EAAvE,iBAAsB,EAAE,IAA+C;EAAvE,aAAsB,EAAE,IAA+C;EAAvE,SAAsB,EAAE,IAA+C;ED/U9E,OAAO,EAAE,CAAC;EAEV,kCAAI;IACH,OAAO,EAAE,CAAC",
-"sources": ["../sass/noscript.scss","../sass/libs/_vendor.scss"],
-"names": [],
-"file": "noscript.css"
-}

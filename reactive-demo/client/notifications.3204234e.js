@@ -1,1 +1,0 @@
-import{S as t,i as s,s as i,n as e}from"./index.7791bd5e.js";function n(t){return{c(){this.h()},l(t){this.h()},h(){document.title="Notifications"},m:e,p:e,i:e,o:e,d:e}}export default class extends t{constructor(t){super(),s(this,t,null,n,i,[])}}
