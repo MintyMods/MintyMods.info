@@ -30,7 +30,7 @@ $("#download").click(function () {
         }
         notice.update({
             type: 'info',
-            text: '<ul class="actions special"><li><a href="demo/demo.html" title="Very early prototype of the application" class="tooltip button primary icon fa-lightbulb-on">View Online Demo</a></li></ul>',
+            text: '<ul class="actions special"><li><a href="demo.html" title="Very early prototype of the application" class="tooltip button primary icon fa-lightbulb-on">View Online Demo</a></li></ul>',
             addClass: 'minty-notification ',
             icon: 'fad fa-eye fa-2x',
             textTrusted: true,
