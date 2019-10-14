@@ -27,6 +27,10 @@ body {
 	position: relative;
 }
 
+.error {
+	color: var(--theme-on-error);
+	background-color: var(--theme-error);
+}
 .clearfix:after {
 	content: "";
 	display: block;
@@ -43,7 +47,6 @@ body {
 }
 .pickr {
 	position: absolute;
-	right: 5px;
+	left: 0px;
 	bottom: 5px;
-	transform: scale(.7);
 }
